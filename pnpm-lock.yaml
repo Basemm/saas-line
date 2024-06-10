@@ -29,12 +29,6 @@ importers:
       next:
         specifier: 14.2.3
         version: 14.2.3(react-dom@18.3.1)(react@18.3.1)
-      prettier:
-        specifier: ^3.2.5
-        version: 3.2.5
-      prettier-plugin-tailwindcss:
-        specifier: ^0.6.2
-        version: 0.6.2(prettier@3.2.5)
       react:
         specifier: ^18.3.1
         version: 18.3.1
@@ -69,6 +63,12 @@ importers:
       postcss:
         specifier: ^8
         version: 8.4.31
+      prettier:
+        specifier: ^3.2.5
+        version: 3.2.5
+      prettier-plugin-tailwindcss:
+        specifier: ^0.6.2
+        version: 0.6.2(prettier@3.2.5)
       tailwindcss:
         specifier: ^3.4.1
         version: 3.4.3
@@ -4298,11 +4298,12 @@ packages:
         optional: true
     dependencies:
       prettier: 3.2.5
-    dev: false
+    dev: true
 
   /prettier@3.2.5:
     resolution: {integrity: sha512-3/GWa9aOC0YeD7LUfvOG2NiDyhOWRvt1k+rcKhOuYnMY24iiCphgneUfJDyFXd6rZCAnuLBv6UeAULtrhT/F4A==}
     engines: {node: '>=14'}
+    dev: true
 
   /prop-types@15.8.1:
     resolution: {integrity: sha512-oj87CgZICdulUohogVAR7AjlC0327U4el4L6eAvOqCeudMDVU0NThNaV+b9Df4dXgSP1gXMTnPdhfe/2qDH5cg==}

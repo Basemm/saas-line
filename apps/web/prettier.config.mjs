@@ -1,4 +1,4 @@
-import prettierConfig from '@repo/prettier-config' assert { type: 'json' }
+import prettierConfig from '@repo/prettier-config'
 
 export default {
   ...prettierConfig,

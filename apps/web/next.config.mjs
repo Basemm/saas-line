@@ -2,7 +2,9 @@
 
 import NextBundleAnalyzer from '@next/bundle-analyzer'
 
-const nextConfig = {}
+const nextConfig = {
+  transpilePackages: ['@repo/core-ui'],
+}
 
 const withBundleAnalyzer = NextBundleAnalyzer({
   enabled: process.env.ANALYZE === 'true',

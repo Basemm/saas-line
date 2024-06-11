@@ -6,6 +6,6 @@
       "@repo/core-ui/*": ["./src/*"]
     }
   },
-  "include": ["src", "tailwind.config.ts"],
+  "include": ["src", "tailwind.config.ts", "postcss.config.mjs"],
   "exclude": ["node_modules"]
 }

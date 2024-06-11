@@ -13,6 +13,9 @@
     "lint": {
       "dependsOn": ["^lint"]
     },
+    "format:check": {
+      "dependsOn": ["^format:check"]
+    },
     "dev": {
       "cache": false,
       "persistent": true

@@ -10,11 +10,21 @@ const project = resolve(process.cwd(), "tsconfig.json");
 
 /** @type {import("eslint").Linter.Config} */
 module.exports = {
-  extends: ["eslint:recommended", "prettier", "eslint-config-turbo"],
+  extends: [
+    "eslint:recommended",
+    "prettier",
+    "eslint-config-turbo",
+    require.resolve("@vercel/style-guide/eslint/typescript"),
+    require.resolve("@vercel/style-guide/eslint/react"),
+  ],
   plugins: ["only-warn"],
+  rules: {
+    "@typescript-eslint/explicit-function-return-type": "off",
+  },
   globals: {
     React: true,
     JSX: true,
+    require: true,
   },
   env: {
     browser: true,

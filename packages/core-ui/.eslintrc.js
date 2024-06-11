@@ -6,4 +6,7 @@ module.exports = {
   rules: {
     "no-redeclare": "off",
   },
+  parserOptions: {
+    project: true,
+  },
 };

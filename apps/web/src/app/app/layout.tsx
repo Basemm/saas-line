@@ -1,14 +1,30 @@
+import {
+  Menubar,
+  MenubarContent,
+  MenubarItem,
+  MenubarMenu,
+  MenubarSeparator,
+  MenubarShortcut,
+  MenubarSub,
+  MenubarSubContent,
+  MenubarSubTrigger,
+  MenubarTrigger,
+} from '@repo/core-ui/components/ui/menubar'
 import '@repo/core-ui/globals.css'
 import { cn } from '@repo/core-ui/lib/utils'
 import {
+  ChevronRightIcon,
   Home,
   LineChart,
+  Monitor,
+  Moon,
   Package,
   Package2,
   PanelLeft,
   Search,
   Settings,
   ShoppingCart,
+  Sun,
   Users2,
 } from 'lucide-react'
 import type { Metadata } from 'next'
@@ -16,6 +32,12 @@ import { Inter as FontSans } from 'next/font/google'
 import Image from 'next/image'
 import Link from 'next/link'
 
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from '@repo/core-ui/components/ui/avatar'
+import { Badge } from '@repo/core-ui/components/ui/badge'
 import {
   Breadcrumb,
   BreadcrumbItem,
@@ -26,14 +48,12 @@ import {
 } from '@repo/core-ui/components/ui/breadcrumb'
 import { Button } from '@repo/core-ui/components/ui/button'
 import {
-  DropdownMenu,
-  DropdownMenuContent,
-  DropdownMenuItem,
-  DropdownMenuLabel,
-  DropdownMenuSeparator,
-  DropdownMenuTrigger,
-} from '@repo/core-ui/components/ui/dropdown-menu'
+  Collapsible,
+  CollapsibleContent,
+  CollapsibleTrigger,
+} from '@repo/core-ui/components/ui/collapsible'
 import { Input } from '@repo/core-ui/components/ui/input'
+import { Separator } from '@repo/core-ui/components/ui/separator'
 import {
   Sheet,
   SheetContent,
@@ -241,31 +261,220 @@ export default function RootLayout({
                 />
               </div>
 
-              <DropdownMenu>
-                <DropdownMenuTrigger asChild>
-                  <Button
-                    variant="outline"
-                    size="icon"
-                    className="overflow-hidden rounded-full"
+              <Sheet>
+                <SheetTrigger asChild>
+                  <Avatar className="block sm:hidden">
+                    <AvatarImage src="/img/avatar.jpg" alt="Mike Ross" />
+                    <AvatarFallback>MR</AvatarFallback>
+                    <span className="sr-only">Toggle my account menu</span>
+                  </Avatar>
+                </SheetTrigger>
+                <SheetContent side="right" className="px-0">
+                  <nav className="flex flex-col gap-2">
+                    <div className="flex gap-2 px-4">
+                      <Image
+                        src="/img/avatar.jpg"
+                        alt="Logo"
+                        width={80}
+                        height={80}
+                        className="max-w-fit rounded-md"
+                      />
+                      <div className="mt-2">
+                        <h4 className="flex items-center gap-2">
+                          <p>Mike Ross</p>
+                          <Badge variant="secondary">Pro</Badge>
+                        </h4>
+                        <p className="my-1 text-xs text-muted-foreground">
+                          mike.ross@nast.gov
+                        </p>
+                        <p className="my-1 text-xs text-muted-foreground">
+                          Last: October 30, 2025 8:00 AM
+                        </p>
+                      </div>
+                    </div>
+
+                    <Separator className="my-2" />
+
+                    <Link
+                      href="#"
+                      className="px-4 py-2 text-base font-medium hover:text-muted-foreground"
+                    >
+                      My Account
+                    </Link>
+                    <Link
+                      href="#"
+                      className="px-4 py-2 text-base font-medium hover:text-muted-foreground"
+                    >
+                      Search
+                    </Link>
+
+                    <Collapsible className="grid gap-1">
+                      <CollapsibleTrigger className="flex items-center justify-between rounded-md px-4 py-2 transition-colors hover:bg-gray-200 dark:hover:bg-gray-800">
+                        Settings
+                        <ChevronRightIcon className="h-5 w-5 transition-transform [&[data-state=open]]:rotate-90" />
+                      </CollapsibleTrigger>
+                      <CollapsibleContent className="space-y-1 pl-4">
+                        <ul className="my-0 flex list-none flex-col gap-6 pt-4 text-sm font-medium [&>li]:mt-0">
+                          <li>
+                            <Link
+                              href="#"
+                              className="hover:text-muted-foreground"
+                            >
+                              Personal Info
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              className="hover:text-muted-foreground"
+                            >
+                              Security
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              className="hover:text-muted-foreground"
+                            >
+                              Billing
+                            </Link>
+                          </li>
+                        </ul>
+                      </CollapsibleContent>
+                    </Collapsible>
+                    <Collapsible className="grid gap-1">
+                      <CollapsibleTrigger className="flex items-center justify-between rounded-md px-4 py-2 transition-colors hover:bg-gray-200 dark:hover:bg-gray-800">
+                        Color Mode
+                        <ChevronRightIcon className="h-5 w-5 transition-transform [&[data-state=open]]:rotate-90" />
+                      </CollapsibleTrigger>
+                      <CollapsibleContent className="space-y-1 pl-4">
+                        <ul className="my-0 flex list-none flex-col gap-6 pt-4 text-sm font-medium [&>li]:mt-0">
+                          <li>
+                            <Link
+                              href="#"
+                              className="hover:text-muted-foreground"
+                            >
+                              <p className="flex items-center gap-1">
+                                <Sun />
+                                Light
+                              </p>
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              className="hover:text-muted-foreground"
+                            >
+                              <p className="flex items-center gap-1">
+                                <Moon className="mr-2" />
+                                Dark
+                              </p>
+                            </Link>
+                          </li>
+                          <li>
+                            <Link
+                              href="#"
+                              className="hover:text-muted-foreground"
+                            >
+                              <p className="flex items-center gap-1">
+                                <Monitor className="mr-2" />
+                                System
+                              </p>
+                            </Link>
+                          </li>
+                        </ul>
+                      </CollapsibleContent>
+                    </Collapsible>
+
+                    <Link
+                      href="#"
+                      className="px-4 py-2 text-base font-medium hover:text-muted-foreground"
+                    >
+                      Support
+                    </Link>
+
+                    <Separator className="my-2" />
+
+                    <Link
+                      href="#"
+                      className="px-4 py-2 text-base font-medium hover:text-muted-foreground"
+                    >
+                      Logout
+                    </Link>
+                  </nav>
+                </SheetContent>
+              </Sheet>
+
+              <Menubar className="hidden h-auto rounded-full border-0 p-0 sm:block">
+                <MenubarMenu>
+                  <MenubarTrigger
+                    title="My Accounts"
+                    className="p-0 focus:bg-background data-[state=open]:bg-background"
                   >
-                    <Image
-                      src="/placeholder-user.jpg"
-                      width={36}
-                      height={36}
-                      alt="Avatar"
-                      className="overflow-hidden rounded-full"
-                    />
-                  </Button>
-                </DropdownMenuTrigger>
-                <DropdownMenuContent align="end">
-                  <DropdownMenuLabel>My Account</DropdownMenuLabel>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuItem>Settings</DropdownMenuItem>
-                  <DropdownMenuItem>Support</DropdownMenuItem>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuItem>Logout</DropdownMenuItem>
-                </DropdownMenuContent>
-              </DropdownMenu>
+                    <Avatar>
+                      <AvatarImage src="/img/avatar.jpg" alt="Mike Ross" />
+                      <AvatarFallback>MR</AvatarFallback>
+                    </Avatar>
+                    <span className="sr-only">Toggle my account menu</span>
+                  </MenubarTrigger>
+                  <MenubarContent className="w-80 p-2">
+                    <div className="flex gap-2">
+                      <Image
+                        src="/img/avatar.jpg"
+                        alt="Logo"
+                        width={80}
+                        height={80}
+                        className="max-w-fit rounded-md"
+                      />
+                      <div className="mt-2">
+                        <h4 className="flex items-center gap-2">
+                          <p>Mike Ross</p>
+                          <Badge variant="secondary">Pro</Badge>
+                        </h4>
+                        <p className="my-1 text-xs text-muted-foreground">
+                          mike.ross@nast.gov
+                        </p>
+                        <p className="my-1 text-xs text-muted-foreground">
+                          Last: October 30, 2025 8:00 AM
+                        </p>
+                      </div>
+                    </div>
+                    <MenubarSeparator className="my-2" />
+                    <MenubarItem>My Account</MenubarItem>
+                    <MenubarItem>
+                      Search <MenubarShortcut>⌘T</MenubarShortcut>
+                    </MenubarItem>
+                    <MenubarSub>
+                      <MenubarSubTrigger>Settings</MenubarSubTrigger>
+                      <MenubarSubContent>
+                        <MenubarItem>Personal Info</MenubarItem>
+                        <MenubarItem>Security</MenubarItem>
+                        <MenubarItem>Billing</MenubarItem>
+                      </MenubarSubContent>
+                    </MenubarSub>
+                    <MenubarSub>
+                      <MenubarSubTrigger>Color Mode</MenubarSubTrigger>
+                      <MenubarSubContent>
+                        <MenubarItem>
+                          <Sun className="mr-2" />
+                          Light
+                        </MenubarItem>
+                        <MenubarItem>
+                          <Moon className="mr-2" />
+                          Dark
+                        </MenubarItem>
+                        <MenubarItem>
+                          <Monitor className="mr-2" />
+                          System
+                        </MenubarItem>
+                      </MenubarSubContent>
+                    </MenubarSub>
+                    <MenubarItem>Support</MenubarItem>
+                    <MenubarSeparator className="my-2" />
+                    <MenubarItem>Logout</MenubarItem>
+                  </MenubarContent>
+                </MenubarMenu>
+              </Menubar>
             </header>
             <main className="grid flex-1 items-start gap-4 p-4 sm:px-6 sm:py-0 md:gap-8 lg:grid-cols-3 xl:grid-cols-3">
               {children}

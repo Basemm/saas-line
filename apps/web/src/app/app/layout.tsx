@@ -82,7 +82,7 @@ export default function RootLayout({
   children: React.ReactNode
 }>) {
   return (
-    <html className="dark" lang="en">
+    <html className="dark antialiased" lang="en">
       <body
         className={cn(
           'min-h-screen bg-background font-sans antialiased',
@@ -104,7 +104,7 @@ export default function RootLayout({
                   <TooltipTrigger asChild>
                     <Link
                       href="#"
-                      className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+                      className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent text-accent-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
                     >
                       <Home className="h-5 w-5" />
                       <span className="sr-only">Dashboard</span>
@@ -116,7 +116,7 @@ export default function RootLayout({
                   <TooltipTrigger asChild>
                     <Link
                       href="#"
-                      className="flex h-9 w-9 items-center justify-center rounded-lg bg-accent text-accent-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
+                      className="flex h-9 w-9 items-center justify-center rounded-lg text-muted-foreground transition-colors hover:text-foreground md:h-8 md:w-8"
                     >
                       <ShoppingCart className="h-5 w-5" />
                       <span className="sr-only">Orders</span>
@@ -476,9 +476,8 @@ export default function RootLayout({
                 </MenubarMenu>
               </Menubar>
             </header>
-            <main className="grid flex-1 items-start gap-4 p-4 sm:px-6 sm:py-0 md:gap-8 lg:grid-cols-3 xl:grid-cols-3">
-              {children}
-            </main>
+
+            {children}
           </div>
         </div>
       </body>

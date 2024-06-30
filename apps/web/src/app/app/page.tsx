@@ -16,9 +16,9 @@ import { ChevronDown, ChevronUp } from 'lucide-react'
 export default function Home() {
   return (
     <main className="p-2">
-      <div className="grid justify-center gap-2 lg:grid-cols-2">
-        <div className="grid auto-rows-fr gap-2 sm:grid-cols-2">
-          <Card className="flex flex-col justify-between">
+      <div className="grid justify-center gap-8 lg:grid-cols-2">
+        <div className="grid auto-rows-fr gap-8 sm:grid-cols-2">
+          <Card className="flex flex-col justify-between bg-secondary">
             <CardHeader>
               <CardTitle className="flex justify-center gap-4 align-middle">
                 $156,231
@@ -39,7 +39,7 @@ export default function Home() {
               </div>
             </CardContent>
           </Card>
-          <Card className="flex flex-col justify-between">
+          <Card className="flex flex-col justify-between bg-secondary">
             <CardHeader>
               <CardTitle className="flex justify-center gap-4 align-middle">
                 2,356
@@ -55,7 +55,7 @@ export default function Home() {
               <NewCustomersSparkChart />
             </CardContent>
           </Card>
-          <Card className="flex flex-col justify-between">
+          <Card className="flex flex-col justify-between bg-secondary">
             <CardHeader>
               <CardTitle className="flex justify-center gap-4 align-middle">
                 46,154
@@ -71,7 +71,7 @@ export default function Home() {
               <VisitorsSparkChart />
             </CardContent>
           </Card>
-          <Card className="flex flex-col justify-between">
+          <Card className="flex flex-col justify-between bg-secondary">
             <CardHeader>
               <CardTitle className="flex justify-center gap-4 align-middle">
                 26,879

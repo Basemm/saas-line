@@ -1,5 +1,5 @@
 import { NewCustomersSparkChart } from '@/app/app/_components/newCustomersSparkChart'
-import SalesChart from '@/app/app/_components/salesChart'
+import RevenueExpenditureChart from '@/app/app/_components/revenueExpenditureChart'
 import { SalesProgressChart } from '@/app/app/_components/salesProgressChart'
 import { UniqueNewVisitorsSparkChart } from '@/app/app/_components/uniqueNewVisitorsSparkChart'
 import { VisitorsSparkChart } from '@/app/app/_components/visitorsSparkChart'
@@ -15,7 +15,7 @@ import { ChevronDown, ChevronUp } from 'lucide-react'
 
 export default function Home() {
   return (
-    <main className="p-2">
+    <main className="p-8">
       <div className="grid justify-center gap-8 lg:grid-cols-2">
         <div className="grid auto-rows-fr gap-8 sm:grid-cols-2">
           <Card className="flex flex-col justify-between bg-secondary">
@@ -89,7 +89,7 @@ export default function Home() {
           </Card>
         </div>
 
-        <SalesChart />
+        <RevenueExpenditureChart />
       </div>
     </main>
   )

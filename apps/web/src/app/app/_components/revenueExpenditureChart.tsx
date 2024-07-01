@@ -68,7 +68,7 @@ const chartData = [
 const dataFormatter = (number: number) =>
   `$${Intl.NumberFormat('us').format(number).toString()}`
 
-export default function SalesChart() {
+export default function RevenueExpenditureChart() {
   return (
     <AreaChart
       categories={['Revenue', 'Expenditure']}
@@ -76,6 +76,7 @@ export default function SalesChart() {
       colors={['blue', 'red-700']}
       data={chartData}
       index="date"
+      showAnimation
       valueFormatter={dataFormatter}
       yAxisWidth={60}
     />

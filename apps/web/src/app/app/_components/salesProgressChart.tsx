@@ -2,7 +2,7 @@
 
 import { ProgressCircle } from '@tremor/react'
 
-export function SalesProgressChart() {
+export default function SalesProgressChart() {
   return (
     <div className="flex justify-center">
       <ProgressCircle size="md" value={78}>

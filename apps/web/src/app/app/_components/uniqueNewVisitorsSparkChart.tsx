@@ -23,7 +23,7 @@ const chartData = [
   },
 ]
 
-export function UniqueNewVisitorsSparkChart() {
+export default function UniqueNewVisitorsSparkChart() {
   return (
     <div className="flex justify-center">
       <SparkAreaChart

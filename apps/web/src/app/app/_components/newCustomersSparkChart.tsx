@@ -31,7 +31,7 @@ const chartData = [
   },
 ]
 
-export function NewCustomersSparkChart() {
+export default function NewCustomersSparkChart() {
   return (
     <div className="flex justify-center">
       <SparkAreaChart

@@ -1,8 +1,8 @@
-import { NewCustomersSparkChart } from '@/app/app/_components/newCustomersSparkChart'
+import NewCustomersSparkChart from '@/app/app/_components/newCustomersSparkChart'
 import RevenueExpenditureChart from '@/app/app/_components/revenueExpenditureChart'
-import { SalesProgressChart } from '@/app/app/_components/salesProgressChart'
-import { UniqueNewVisitorsSparkChart } from '@/app/app/_components/uniqueNewVisitorsSparkChart'
-import { VisitorsSparkChart } from '@/app/app/_components/visitorsSparkChart'
+import SalesProgressChart from '@/app/app/_components/salesProgressChart'
+import UniqueNewVisitorsSparkChart from '@/app/app/_components/uniqueNewVisitorsSparkChart'
+import VisitorsSparkChart from '@/app/app/_components/visitorsSparkChart'
 import { Badge } from '@repo/core-ui/components/ui/badge'
 import {
   Card,

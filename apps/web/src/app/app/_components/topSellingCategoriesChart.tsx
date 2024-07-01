@@ -13,32 +13,32 @@ const chartData = [
   {
     name: 'Mobile Phones',
     value: 31000,
-    color: 'blue-700',
-    icon: SmartphoneIcon,
+    color: 'blue-500 dark:bg-blue-700',
+    icon: () => <SmartphoneIcon className="pb-1 pr-2" size={24} />,
   },
   {
     name: 'Laptops',
     value: 26000,
-    color: 'green-700',
-    icon: LaptopIcon,
+    color: 'green-500 dark:bg-green-700',
+    icon: () => <LaptopIcon className="pb-1 pr-2" size={24} />,
   },
   {
     name: 'eBooks',
     value: 21000,
-    color: 'red-700',
-    icon: BookOpenIcon,
+    color: 'red-500 dark:bg-red-700',
+    icon: () => <BookOpenIcon className="pb-1 pr-2" size={24} />,
   },
   {
     name: 'Skin Care',
     value: 18600,
-    color: 'violet-700',
-    icon: HandIcon,
+    color: 'violet-500 dark:bg-violet-700',
+    icon: () => <HandIcon className="pb-1 pr-2" size={24} />,
   },
   {
     name: 'Video Games',
     value: 14200,
-    color: 'slate-700',
-    icon: Gamepad2Icon,
+    color: 'amber-500 dark:bg-amber-700',
+    icon: () => <Gamepad2Icon className="pb-1 pr-2" size={24} />,
   },
 ]
 

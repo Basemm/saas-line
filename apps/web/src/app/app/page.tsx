@@ -1,5 +1,5 @@
 import NewCustomersSparkChart from '@/app/app/_components/newCustomersSparkChart'
-import RevenueExpenditureChart from '@/app/app/_components/revenueExpenditureChart'
+import CashFlowChart from '@/app/app/_components/cashFlowChart'
 import SalesProgressChart from '@/app/app/_components/salesProgressChart'
 import { TopSellingCategoriesChart } from '@/app/app/_components/topSellingCategoriesChart'
 import UniqueNewVisitorsSparkChart from '@/app/app/_components/uniqueNewVisitorsSparkChart'
@@ -91,7 +91,10 @@ export default function Home() {
           </Card>
         </div>
 
-        <RevenueExpenditureChart />
+        <div>
+          <h3 className="text-center text-muted-foreground">Cash Flow</h3>
+          <CashFlowChart />
+        </div>
       </div>
 
       <div className="my-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">

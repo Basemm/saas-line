@@ -75,7 +75,7 @@ const dataFormatter = (number: number) =>
     .format(number)
     .toString()
 
-export default function RevenueExpenditureChart() {
+export default function CashFlowChart() {
   return (
     <AreaChart
       categories={['Revenue', 'Expenditure']}

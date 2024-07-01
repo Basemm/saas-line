@@ -1,9 +1,11 @@
 import NewCustomersSparkChart from '@/app/app/_components/newCustomersSparkChart'
 import RevenueExpenditureChart from '@/app/app/_components/revenueExpenditureChart'
 import SalesProgressChart from '@/app/app/_components/salesProgressChart'
+import { TopSellingCategoriesChart } from '@/app/app/_components/topSellingCategoriesChart'
 import UniqueNewVisitorsSparkChart from '@/app/app/_components/uniqueNewVisitorsSparkChart'
 import VisitorsSparkChart from '@/app/app/_components/visitorsSparkChart'
 import { Badge } from '@repo/core-ui/components/ui/badge'
+import { Button } from '@repo/core-ui/components/ui/button'
 import {
   Card,
   CardContent,
@@ -11,7 +13,7 @@ import {
   CardHeader,
   CardTitle,
 } from '@repo/core-ui/components/ui/card'
-import { ChevronDown, ChevronUp } from 'lucide-react'
+import { ChevronDown, ChevronUp, SettingsIcon } from 'lucide-react'
 
 export default function Home() {
   return (
@@ -90,6 +92,23 @@ export default function Home() {
         </div>
 
         <RevenueExpenditureChart />
+      </div>
+
+      <div className="my-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
+        <Card className="bg-secondary">
+          <CardHeader>
+            <CardTitle className="flex justify-between">
+              <p className="self-center">Top Selling Categories</p>
+              <Button size="icon" title="Settings" variant="ghost">
+                <SettingsIcon />
+              </Button>
+            </CardTitle>
+            <CardDescription>Total Sales $110K</CardDescription>
+          </CardHeader>
+          <CardContent>
+            <TopSellingCategoriesChart />
+          </CardContent>
+        </Card>
       </div>
     </main>
   )

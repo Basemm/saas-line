@@ -66,7 +66,14 @@ const chartData = [
 ]
 
 const dataFormatter = (number: number) =>
-  `$${Intl.NumberFormat('us').format(number).toString()}`
+  Intl.NumberFormat('us', {
+    style: 'currency',
+    currency: 'USD',
+    maximumSignificantDigits: 3,
+    notation: 'compact',
+  })
+    .format(number)
+    .toString()
 
 export default function RevenueExpenditureChart() {
   return (

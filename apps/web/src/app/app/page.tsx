@@ -4,6 +4,7 @@ import SalesProgressChart from '@/app/app/_components/salesProgressChart'
 import { TopSellingCategoriesChart } from '@/app/app/_components/topSellingCategoriesChart'
 import UniqueNewVisitorsSparkChart from '@/app/app/_components/uniqueNewVisitorsSparkChart'
 import VisitorsSparkChart from '@/app/app/_components/visitorsSparkChart'
+import VisitsBySource from '@/app/app/_components/visitsBySource'
 import { Badge } from '@repo/core-ui/components/ui/badge'
 import { Button } from '@repo/core-ui/components/ui/button'
 import {
@@ -248,6 +249,10 @@ export default function Home() {
             </div>
           </CardContent>
         </Card>
+      </div>
+
+      <div className="my-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
+        <VisitsBySource />
       </div>
     </main>
   )

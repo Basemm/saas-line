@@ -1,5 +1,5 @@
-import NewCustomersSparkChart from '@/app/app/_components/newCustomersSparkChart'
 import CashFlowChart from '@/app/app/_components/cashFlowChart'
+import NewCustomersSparkChart from '@/app/app/_components/newCustomersSparkChart'
 import SalesProgressChart from '@/app/app/_components/salesProgressChart'
 import { TopSellingCategoriesChart } from '@/app/app/_components/topSellingCategoriesChart'
 import UniqueNewVisitorsSparkChart from '@/app/app/_components/uniqueNewVisitorsSparkChart'
@@ -14,6 +14,8 @@ import {
   CardTitle,
 } from '@repo/core-ui/components/ui/card'
 import { ChevronDown, ChevronUp, SettingsIcon } from 'lucide-react'
+import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
@@ -97,8 +99,8 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="my-8 grid gap-8 sm:grid-cols-2 lg:grid-cols-3">
-        <Card className="bg-secondary">
+      <div className="my-8 grid gap-8 lg:grid-cols-3">
+        <Card className="col-span-2 bg-secondary lg:col-span-1">
           <CardHeader>
             <CardTitle className="flex justify-between">
               <p className="self-center">Top Selling Categories</p>
@@ -110,6 +112,140 @@ export default function Home() {
           </CardHeader>
           <CardContent>
             <TopSellingCategoriesChart />
+          </CardContent>
+        </Card>
+
+        <Card className="col-span-2 bg-secondary">
+          <CardHeader>
+            <CardTitle className="flex justify-between">
+              <p className="self-center">Top Selling Products</p>
+              <Button size="icon" title="Settings" variant="ghost">
+                <SettingsIcon />
+              </Button>
+            </CardTitle>
+            <CardDescription>Total Sales $147K</CardDescription>
+          </CardHeader>
+          <CardContent className="grid gap-8 lg:grid-cols-2">
+            <div className="grid grid-cols-[1fr_6fr_1fr] gap-4">
+              <div className="relative w-16">
+                <Image
+                  alt="iPhone 15 Pro Max"
+                  className="object-contain"
+                  fill
+                  src="/img/iphone15.png"
+                />
+              </div>
+              <Link href="#" title="Apple iPhone 12 Pro Max">
+                <p>Apple iPhone 12 Pro Max</p>
+                <p className="text-sm text-muted-foreground">
+                  256GB, Pacific Blue
+                </p>
+              </Link>
+              <div className="text-center">
+                <p>$83K</p>
+                <p className="text-sm text-muted-foreground">10k</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-[1fr_6fr_1fr] gap-4">
+              <div className="relative w-16">
+                <Image
+                  alt="Alienware m18 R2 Gaming Laptop"
+                  className="object-contain"
+                  fill
+                  src="/img/alienware-laptop.png"
+                />
+              </div>
+              <Link href="#" title="Alienware m18 R2 Gaming Laptop">
+                <p>Alienware m18 R2 Gaming Laptop</p>
+                <p className="text-sm text-muted-foreground">
+                  Intel i9, RTX 4090
+                </p>
+              </Link>
+              <div className="text-center">
+                <p>$74k</p>
+                <p className="text-sm text-muted-foreground">8K</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-[1fr_6fr_1fr] gap-4">
+              <div className="relative w-16">
+                <Image
+                  alt="The House Maid eBook"
+                  className="object-contain"
+                  fill
+                  src="/img/theHouseMaid-book.jpg"
+                />
+              </div>
+              <Link href="#" title="The Housemaid's Secret Book">
+                <p>The Housemaid's Secret Book</p>
+                <p className="text-sm text-muted-foreground">
+                  The perfect home has one rule
+                </p>
+              </Link>
+              <div className="text-center">
+                <p>$70k</p>
+                <p className="text-sm text-muted-foreground">40K</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-[1fr_6fr_1fr] gap-4">
+              <div className="relative w-16">
+                <Image
+                  alt="The Inmate eBook"
+                  className="object-contain"
+                  fill
+                  src="/img/theinmate-book.jpg"
+                />
+              </div>
+              <Link href="#" title="The Inmate Book">
+                <p>The Inmate Book</p>
+                <p className="text-sm text-muted-foreground">
+                  A gripping, twisty thriller from Freida McFadden
+                </p>
+              </Link>
+              <div className="text-center">
+                <p>$64k</p>
+                <p className="text-sm text-muted-foreground">35K</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-[1fr_6fr_1fr] gap-4">
+              <div className="relative w-16">
+                <Image
+                  alt="eos Shea Better Body Lotion"
+                  className="object-contain"
+                  fill
+                  src="/img/eosSheaBetter.jpg"
+                />
+              </div>
+              <Link href="#" title="eos Shea Better Body Lotion">
+                <p>eos Shea Better Body Lotion</p>
+                <p className="text-sm text-muted-foreground">
+                  Vanilla Cashmere, 24-Hour Moisture Skin Care
+                </p>
+              </Link>
+              <div className="text-center">
+                <p>$52k</p>
+                <p className="text-sm text-muted-foreground">30K</p>
+              </div>
+            </div>
+            <div className="grid grid-cols-[1fr_6fr_1fr] gap-4">
+              <div className="relative w-16">
+                <Image
+                  alt="Fortnite Game"
+                  className="object-contain"
+                  fill
+                  src="/img/fortnite.jpg"
+                />
+              </div>
+              <Link href="#" title="Fortnite Game">
+                <p>Fortnite Game</p>
+                <p className="text-sm text-muted-foreground">
+                  Be the last player standing in Battle Royale and Zero Build
+                </p>
+              </Link>
+              <div className="text-center">
+                <p>$36k</p>
+                <p className="text-sm text-muted-foreground">21K</p>
+              </div>
+            </div>
           </CardContent>
         </Card>
       </div>

@@ -16,7 +16,7 @@ import { SettingsIcon } from 'lucide-react'
 
 export default function VisitsBySourceStat() {
   return (
-    <Card className="col-span-2 lg:col-span-1">
+    <Card>
       <CardHeader>
         <CardTitle className="flex justify-between">
           <p className="self-center">Visits By Source</p>

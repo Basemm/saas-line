@@ -53,5 +53,7 @@ const dataFormatter = (number: number) =>
     .toString()
 
 export function TopSellingCategoriesChart() {
-  return <BarList data={chartData} valueFormatter={dataFormatter} />
+  return (
+    <BarList data={chartData} showAnimation valueFormatter={dataFormatter} />
+  )
 }

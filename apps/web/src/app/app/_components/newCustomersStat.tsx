@@ -44,7 +44,7 @@ const chartData = [
 
 export default function NewCustomersStat() {
   return (
-    <Card className="flex flex-col justify-between bg-secondary">
+    <Card className="flex flex-col justify-between">
       <CardHeader>
         <CardTitle className="flex justify-center gap-4 align-middle">
           2,356

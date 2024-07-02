@@ -12,7 +12,7 @@ import Link from 'next/link'
 
 export default function TopSellingProductsStat() {
   return (
-    <Card className="col-span-2 bg-secondary">
+    <Card className="col-span-2">
       <CardHeader>
         <CardTitle className="flex justify-between">
           <p className="self-center">Top Selling Products</p>

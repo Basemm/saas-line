@@ -75,7 +75,7 @@ const dataFormatter = (number: number) =>
 
 export default function TopSellingCategoriesStat() {
   return (
-    <Card className="col-span-2 bg-secondary lg:col-span-1">
+    <Card className="col-span-2 lg:col-span-1">
       <CardHeader>
         <CardTitle className="flex justify-between">
           <p className="self-center">Top Selling Categories</p>

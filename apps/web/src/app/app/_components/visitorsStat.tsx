@@ -40,7 +40,7 @@ const chartData = [
 
 export default function SalesStat() {
   return (
-    <Card className="flex flex-col justify-between bg-secondary">
+    <Card className="flex flex-col justify-between">
       <CardHeader>
         <CardTitle className="flex justify-center gap-4 align-middle">
           46,154

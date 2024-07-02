@@ -40,6 +40,18 @@ const chartData = [
     color: 'amber-500 dark:bg-amber-700',
     icon: () => <Gamepad2Icon className="pb-1 pr-2" size={24} />,
   },
+  {
+    name: 'Kitchen Tools',
+    value: 10200,
+    color: 'lime-500 dark:bg-lime-700',
+    icon: () => <Gamepad2Icon className="pb-1 pr-2" size={24} />,
+  },
+  {
+    name: 'Gift Cards',
+    value: 8100,
+    color: 'emerald-500 dark:bg-emerald-700',
+    icon: () => <Gamepad2Icon className="pb-1 pr-2" size={24} />,
+  },
 ]
 
 const dataFormatter = (number: number) =>

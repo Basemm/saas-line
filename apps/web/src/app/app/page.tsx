@@ -108,7 +108,7 @@ export default function Home() {
                 <SettingsIcon />
               </Button>
             </CardTitle>
-            <CardDescription>Total Sales $110K</CardDescription>
+            <CardDescription>Total Sales $128K</CardDescription>
           </CardHeader>
           <CardContent>
             <TopSellingCategoriesChart />

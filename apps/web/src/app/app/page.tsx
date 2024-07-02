@@ -6,6 +6,7 @@ import TopSellingProductsStat from '@/app/app/_components/topSellingProductsStat
 import UniqueNewVisitorsStat from '@/app/app/_components/uniqueNewVisitorsStat'
 import VisitorsStat from '@/app/app/_components/visitorsStat'
 import VisitsByCountry from '@/app/app/_components/visitsByCountry'
+import VisitsBySocialMediaStat from '@/app/app/_components/visitsBySocialMediaStat'
 import VisitsBySourceStat from '@/app/app/_components/visitsBySourceStat'
 
 export default function Home() {
@@ -33,6 +34,7 @@ export default function Home() {
       <div className="my-8 grid gap-8 md:grid-cols-2 lg:grid-cols-3">
         <VisitsBySourceStat />
         <VisitsByCountry />
+        <VisitsBySocialMediaStat />
       </div>
     </main>
   )

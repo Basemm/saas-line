@@ -14,7 +14,7 @@ import {
 } from '@repo/core-ui/components/ui/table'
 import { SettingsIcon } from 'lucide-react'
 
-export default function VisitsBySource() {
+export default function VisitsBySourceStat() {
   return (
     <Card className="col-span-2 lg:col-span-1">
       <CardHeader>

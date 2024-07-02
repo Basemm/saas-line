@@ -1,11 +1,20 @@
 'use client'
 
+import { Button } from '@repo/core-ui/components/ui/button'
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from '@repo/core-ui/components/ui/card'
 import { BarList } from '@tremor/react'
 import {
   BookOpenIcon,
   Gamepad2Icon,
   HandIcon,
   LaptopIcon,
+  SettingsIcon,
   SmartphoneIcon,
 } from 'lucide-react'
 
@@ -64,8 +73,25 @@ const dataFormatter = (number: number) =>
     .format(number)
     .toString()
 
-export function TopSellingCategoriesChart() {
+export default function TopSellingCategoriesStat() {
   return (
-    <BarList data={chartData} showAnimation valueFormatter={dataFormatter} />
+    <Card className="col-span-2 bg-secondary lg:col-span-1">
+      <CardHeader>
+        <CardTitle className="flex justify-between">
+          <p className="self-center">Top Selling Categories</p>
+          <Button size="icon" title="Settings" variant="ghost">
+            <SettingsIcon />
+          </Button>
+        </CardTitle>
+        <CardDescription>Total Sales $128K</CardDescription>
+      </CardHeader>
+      <CardContent>
+        <BarList
+          data={chartData}
+          showAnimation
+          valueFormatter={dataFormatter}
+        />
+      </CardContent>
+    </Card>
   )
 }

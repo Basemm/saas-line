@@ -21,9 +21,9 @@ const chartData = [
       <Image
         alt="United States"
         className="mr-2"
-        height={24}
+        height={20}
         src="/img/flags/us.svg"
-        width={24}
+        width={20}
       />
     ),
   },
@@ -35,9 +35,9 @@ const chartData = [
       <Image
         alt="United Kingdom"
         className="mr-2"
-        height={24}
+        height={20}
         src="/img/flags/gb.svg"
-        width={24}
+        width={20}
       />
     ),
   },
@@ -49,9 +49,9 @@ const chartData = [
       <Image
         alt="France"
         className="mr-2"
-        height={24}
+        height={20}
         src="/img/flags/fr.svg"
-        width={24}
+        width={20}
       />
     ),
   },
@@ -63,9 +63,9 @@ const chartData = [
       <Image
         alt="India"
         className="mr-2"
-        height={24}
+        height={20}
         src="/img/flags/in.svg"
-        width={24}
+        width={20}
       />
     ),
   },
@@ -77,9 +77,9 @@ const chartData = [
       <Image
         alt="Germany"
         className="mr-2"
-        height={24}
+        height={20}
         src="/img/flags/de.svg"
-        width={24}
+        width={20}
       />
     ),
   },
@@ -91,9 +91,9 @@ const chartData = [
       <Image
         alt="Russia"
         className="mr-2"
-        height={24}
+        height={20}
         src="/img/flags/ru.svg"
-        width={24}
+        width={20}
       />
     ),
   },
@@ -105,9 +105,9 @@ const chartData = [
       <Image
         alt="Italy"
         className="mr-2"
-        height={24}
+        height={20}
         src="/img/flags/it.svg"
-        width={24}
+        width={20}
       />
     ),
   },
@@ -119,9 +119,9 @@ const chartData = [
       <Image
         alt="Brazil"
         className="mr-2"
-        height={24}
+        height={20}
         src="/img/flags/br.svg"
-        width={24}
+        width={20}
       />
     ),
   },
@@ -133,9 +133,9 @@ const chartData = [
       <Image
         alt="Australia"
         className="mr-2"
-        height={24}
+        height={20}
         src="/img/flags/au.svg"
-        width={24}
+        width={20}
       />
     ),
   },

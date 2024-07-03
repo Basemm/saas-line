@@ -11,7 +11,9 @@ import {
 import { BarList } from '@tremor/react'
 import {
   BookOpenIcon,
+  CookingPotIcon,
   Gamepad2Icon,
+  GiftIcon,
   HandIcon,
   LaptopIcon,
   SettingsIcon,
@@ -53,13 +55,13 @@ const chartData = [
     name: 'Kitchen Tools',
     value: 10200,
     color: 'lime-500 dark:bg-lime-700',
-    icon: () => <Gamepad2Icon className="pb-1 pr-2" size={24} />,
+    icon: () => <CookingPotIcon className="pb-1 pr-2" size={24} />,
   },
   {
     name: 'Gift Cards',
     value: 8100,
     color: 'emerald-500 dark:bg-emerald-700',
-    icon: () => <Gamepad2Icon className="pb-1 pr-2" size={24} />,
+    icon: () => <GiftIcon className="pb-1 pr-2" size={24} />,
   },
 ]
 

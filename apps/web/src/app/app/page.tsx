@@ -1,4 +1,5 @@
 import CashFlowChart from '@/app/app/_components/cashFlowChart'
+import DateRangeSelector from '@/app/app/_components/dateRangeSelector'
 import NewCustomersStat from '@/app/app/_components/newCustomersStat'
 import SalesStat from '@/app/app/_components/salesStat'
 import TopSellingCategoriesStat from '@/app/app/_components/topSellingCategoriesStat'
@@ -11,7 +12,9 @@ import VisitsBySourceStat from '@/app/app/_components/visitsBySourceStat'
 
 export default function Home() {
   return (
-    <main className="p-8">
+    <main className="p-8 pt-0">
+      <DateRangeSelector />
+
       <div className="grid justify-center gap-8 lg:grid-cols-2">
         <div className="grid auto-rows-fr gap-8 sm:grid-cols-2">
           <SalesStat />

@@ -29,6 +29,7 @@ export default function TopSellingProductsStat() {
               alt="iPhone 15 Pro Max"
               className="object-contain"
               fill
+              sizes="20vw"
               src="/img/iphone15.png"
             />
           </div>
@@ -47,6 +48,7 @@ export default function TopSellingProductsStat() {
               alt="Alienware m18 R2 Gaming Laptop"
               className="object-contain"
               fill
+              sizes="20vw"
               src="/img/alienware-laptop.png"
             />
           </div>
@@ -65,6 +67,7 @@ export default function TopSellingProductsStat() {
               alt="The House Maid eBook"
               className="object-contain"
               fill
+              sizes="20vw"
               src="/img/theHouseMaid-book.jpg"
             />
           </div>
@@ -85,6 +88,7 @@ export default function TopSellingProductsStat() {
               alt="The Inmate eBook"
               className="object-contain"
               fill
+              sizes="20vw"
               src="/img/theinmate-book.jpg"
             />
           </div>
@@ -105,6 +109,7 @@ export default function TopSellingProductsStat() {
               alt="eos Shea Better Body Lotion"
               className="object-contain"
               fill
+              sizes="20vw"
               src="/img/eosSheaBetter.jpg"
             />
           </div>
@@ -125,6 +130,7 @@ export default function TopSellingProductsStat() {
               alt="Fortnite Game"
               className="object-contain"
               fill
+              sizes="20vw"
               src="/img/fortnite.jpg"
             />
           </div>

@@ -864,7 +864,9 @@ export default function Home() {
               </div>
             </CardContent>
             <CardFooter className="self-end">
-              <Button className="w-full">Get Started</Button>
+              <Button className="w-full" size="lg">
+                Get Started
+              </Button>
             </CardFooter>
           </Card>
           <Card className="grid justify-between gap-6 border-2 border-muted-foreground p-6">
@@ -909,7 +911,9 @@ export default function Home() {
               </div>
             </CardContent>
             <CardFooter>
-              <Button className="w-full">Get Started</Button>
+              <Button className="w-full" size="lg">
+                Get Started
+              </Button>
             </CardFooter>
           </Card>
           <Card className="grid justify-between gap-6 p-6">
@@ -954,7 +958,9 @@ export default function Home() {
               </div>
             </CardContent>
             <CardFooter>
-              <Button className="w-full">Get Started</Button>
+              <Button className="w-full" size="lg">
+                Get Started
+              </Button>
             </CardFooter>
           </Card>
         </div>

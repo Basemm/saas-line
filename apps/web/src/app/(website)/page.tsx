@@ -184,7 +184,7 @@ export default function Home() {
             <span className="w-[64px] rounded-lg bg-blue-500 p-[14px] text-white">
               <AppleIcon size={36} />
             </span>
-            <h3 className="mt-4">ِSocial Authentication</h3>
+            <h3 className="mt-4">Social Authentication</h3>
             <p className="text-muted-foreground">
               Donec semper ligula eu elementum molestie. Quisque tristique.
             </p>
@@ -242,6 +242,66 @@ export default function Home() {
           </p>
 
           <Button size="lg">Get Started</Button>
+        </div>
+      </section>
+
+      <section className="container flex flex-col gap-16 py-24">
+        <div className="max-w-[540px] self-center text-center">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl">
+            Frequently Asked Questions?
+          </h1>
+          <p className="mt-4 text-muted-foreground">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            semper ligula eu elementum molestie. Quisque tristique lectus ut
+            purus congue.
+          </p>
+        </div>
+
+        <div className="grid gap-24 lg:grid-cols-2">
+          <div className="flex gap-8">
+            <span className="h-[64px] w-[64px] rounded-lg bg-blue-500 p-[14px] text-white">
+              <AppleIcon size={36} />
+            </span>
+            <div>
+              <h3>How long do you retain data?</h3>
+              <p className="mt-6 text-muted-foreground">
+                Donec semper ligula eu elementum molestie. Quisque tristique.
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-8">
+            <span className="h-[64px] w-[64px] rounded-lg bg-blue-500 p-[14px] text-white">
+              <AppWindowIcon size={36} />
+            </span>
+            <div>
+              <h3>Is there a free trial on paid plans?</h3>
+              <p className="mt-6 text-muted-foreground">
+                Donec semper ligula eu elementum molestie. Quisque tristique.
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-8">
+            <span className="h-[64px] w-[64px] rounded-lg bg-blue-500 p-[14px] text-white">
+              <PhoneIcon size={36} />
+            </span>
+            <div>
+              <h3>Do you offer a discount for non-profits?</h3>
+              <p className="mt-6 text-muted-foreground">
+                Donec semper ligula eu elementum molestie. Quisque tristique.
+              </p>
+            </div>
+          </div>
+          <div className="flex gap-8">
+            <span className="h-[64px] w-[64px] rounded-lg bg-blue-500 p-[14px] text-white">
+              <ShoppingCartIcon size={36} />
+            </span>
+            <div>
+              <h3>Are there any annual commitments?</h3>
+              <p className="mt-6 text-muted-foreground">
+                Donec semper ligula eu elementum molestie. Quisque tristique.
+              </p>
+            </div>
+          </div>
         </div>
       </section>
     </main>

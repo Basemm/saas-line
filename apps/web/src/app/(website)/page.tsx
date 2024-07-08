@@ -3,7 +3,13 @@ import GoogleLogo from '@/app/(website)/_components/logos/googleLogo'
 import IndofoodLogo from '@/app/(website)/_components/logos/indofoodLogo'
 import RevelLogo from '@/app/(website)/_components/logos/revelLogo'
 import VMWareLogo from '@/app/(website)/_components/logos/vmwareLogo'
+import {
+  Avatar,
+  AvatarFallback,
+  AvatarImage,
+} from '@repo/core-ui/components/ui/avatar'
 import { Button } from '@repo/core-ui/components/ui/button'
+import { Card, CardContent } from '@repo/core-ui/components/ui/card'
 import {
   AppleIcon,
   AppWindowIcon,
@@ -12,6 +18,7 @@ import {
   MessageSquareTextIcon,
   PhoneIcon,
   ShoppingCartIcon,
+  StarIcon,
 } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -301,6 +308,322 @@ export default function Home() {
                 Donec semper ligula eu elementum molestie. Quisque tristique.
               </p>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="container flex flex-col gap-16 py-24">
+        <div className="max-w-[540px] self-center text-center">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl">
+            10K Clients Can&apos;t Be Wrong?
+          </h1>
+          <p className="mt-4 text-muted-foreground">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+          </p>
+        </div>
+
+        <div className="grid auto-rows-min gap-6 md:grid-cols-2 lg:grid-cols-3">
+          <div className="grid auto-rows-min gap-6">
+            <Card>
+              <CardContent className="p-6">
+                <div className="flex gap-1">
+                  <StarIcon
+                    className="fill-yellow-600 stroke-yellow-600"
+                    size={16}
+                  />
+                  <StarIcon
+                    className="fill-yellow-600 stroke-yellow-600"
+                    size={16}
+                  />
+                  <StarIcon
+                    className="fill-yellow-600 stroke-yellow-600"
+                    size={16}
+                  />
+                  <StarIcon
+                    className="fill-yellow-600 stroke-yellow-600"
+                    size={16}
+                  />
+                  <StarIcon
+                    className="fill-yellow-600 stroke-yellow-600"
+                    size={16}
+                  />
+                </div>
+                <p className="my-8 text-muted-foreground">
+                  "Quisque vel libero vehicula, egestas sem ac, mattis lacus.
+                  Pellentesque placerat semper fermentum. Curabitur congue id
+                  ipsum sit amet ullamcorper. Nulla id est sit amet sapien
+                  ornare facilisis ut quis nulla. Cras condimentum pharetra
+                  libero, ut ullamcorper quam efficitur eget. Donec maximus
+                  purus ipsum, sit amet semper elit sodales id. Cras quis enim
+                  magna. Pellentesque maximus lacus ac lorem auctor efficitur."
+                </p>
+
+                <div className="flex gap-4">
+                  <Avatar>
+                    <AvatarImage
+                      alt="Jonny Cadden"
+                      src="/img/avatar/male-avatar-1.jpg"
+                    />
+                    <AvatarFallback>CN</AvatarFallback>
+                  </Avatar>
+                  <div>
+                    <h6 className="text-sm">Jonny Cadden</h6>
+                    <p className="text-xs text-muted-foreground">
+                      CEO of Sigma
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="p-6">
+                <div className="flex gap-1">
+                  <StarIcon
+                    className="fill-yellow-600 stroke-yellow-600"
+                    size={16}
+                  />
+                  <StarIcon
+                    className="fill-yellow-600 stroke-yellow-600"
+                    size={16}
+                  />
+                  <StarIcon
+                    className="fill-yellow-600 stroke-yellow-600"
+                    size={16}
+                  />
+                  <StarIcon
+                    className="fill-yellow-600 stroke-yellow-600"
+                    size={16}
+                  />
+                  <StarIcon size={16} />
+                </div>
+                <p className="my-8 text-muted-foreground">
+                  "Quisque vel libero vehicula, egestas sem ac, mattis lacus.
+                  Pellentesque placerat semper fermentum. Curabitur congue id
+                  ipsum sit amet ullamcorper. Nulla id est sit amet sapien
+                  ornare facilisis ut quis nulla. Integer ac lacus quis quam
+                  sollicitudin porttitor eu vel lectus. Aenean at elit non nisl
+                  convallis aliquam. Curabitur nec blandit nulla. Cras
+                  condimentum pharetra libero, ut ullamcorper"
+                </p>
+
+                <div className="flex gap-4">
+                  <Avatar>
+                    <AvatarImage
+                      alt="Michael Cox"
+                      src="/img/avatar/male-avatar-2.jpg"
+                    />
+                    <AvatarFallback>CN</AvatarFallback>
+                  </Avatar>
+                  <div>
+                    <h6 className="text-sm">Michael Cox</h6>
+                    <p className="text-xs text-muted-foreground">
+                      Frontend Developer
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="grid auto-rows-min gap-6">
+            <Card>
+              <CardContent className="p-6">
+                <div className="flex gap-1">
+                  <StarIcon
+                    className="fill-yellow-600 stroke-yellow-600"
+                    size={16}
+                  />
+                  <StarIcon
+                    className="fill-yellow-600 stroke-yellow-600"
+                    size={16}
+                  />
+                  <StarIcon
+                    className="fill-yellow-600 stroke-yellow-600"
+                    size={16}
+                  />
+                  <StarIcon
+                    className="fill-yellow-600 stroke-yellow-600"
+                    size={16}
+                  />
+                  <StarIcon size={16} />
+                </div>
+                <p className="my-8 text-muted-foreground">
+                  "Quisque vel libero vehicula, egestas sem ac, mattis lacus.
+                  Pellentesque placerat semper fermentum. Curabitur congue id
+                  ipsum sit amet ullamcorper. Nulla id est sit amet sapien
+                  ornare facilisis ut quis nulla."
+                </p>
+
+                <div className="flex gap-4">
+                  <Avatar>
+                    <AvatarImage
+                      alt="Zoe Hendrika"
+                      src="/img/avatar/female-avatar-1.jpg"
+                    />
+                    <AvatarFallback>ZH</AvatarFallback>
+                  </Avatar>
+                  <div>
+                    <h6 className="text-sm">Zoe Hendrika</h6>
+                    <p className="text-xs text-muted-foreground">
+                      Founder of Alpha Inc
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="p-6">
+                <div className="flex gap-1">
+                  <StarIcon
+                    className="fill-yellow-600 stroke-yellow-600"
+                    size={16}
+                  />
+                  <StarIcon
+                    className="fill-yellow-600 stroke-yellow-600"
+                    size={16}
+                  />
+                  <StarIcon
+                    className="fill-yellow-600 stroke-yellow-600"
+                    size={16}
+                  />
+                  <StarIcon
+                    className="fill-yellow-600 stroke-yellow-600"
+                    size={16}
+                  />
+                  <StarIcon
+                    className="fill-yellow-600 stroke-yellow-600"
+                    size={16}
+                  />
+                </div>
+                <p className="my-8 text-muted-foreground">
+                  "Nulla tristique nisl in sapien sollicitudin, eu pharetra
+                  sapien tempor. Sed tempus ut nunc malesuada mollis. Etiam
+                  vestibulum elit vel felis placerat, sit amet sagittis neque
+                  dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing
+                  elit. Nunc ornare molestie ipsum, at accumsan justo fringilla
+                  vitae. Sed ac cursus lacus. Integer ac lacus quis quam
+                  sollicitudin porttitor eu vel lectus. Aenean at elit non nisl
+                  convallis aliquam. Curabitur nec blandit nulla. Cras
+                  condimentum pharetra libero, ut ullamcorper quam efficitur
+                  eget. Donec maximus purus ipsum, sit amet semper elit sodales
+                  id. Cras quis enim magna. Pellentesque maximus lacus ac lorem
+                  auctor efficitur."
+                </p>
+
+                <div className="flex gap-4">
+                  <Avatar>
+                    <AvatarImage
+                      alt="Mike Pence"
+                      src="/img/avatar/male-avatar-4.jpg"
+                    />
+                    <AvatarFallback>MP</AvatarFallback>
+                  </Avatar>
+                  <div>
+                    <h6 className="text-sm">Mike Pence</h6>
+                    <p className="text-xs text-muted-foreground">
+                      Founder of Gresdane
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+
+          <div className="grid auto-rows-min gap-6">
+            <Card>
+              <CardContent className="p-6">
+                <div className="flex gap-1">
+                  <StarIcon
+                    className="fill-yellow-600 stroke-yellow-600"
+                    size={16}
+                  />
+                  <StarIcon
+                    className="fill-yellow-600 stroke-yellow-600"
+                    size={16}
+                  />
+                  <StarIcon
+                    className="fill-yellow-600 stroke-yellow-600"
+                    size={16}
+                  />
+                  <StarIcon
+                    className="fill-yellow-600 stroke-yellow-600"
+                    size={16}
+                  />
+                  <StarIcon
+                    className="fill-yellow-600 stroke-yellow-600"
+                    size={16}
+                  />
+                </div>
+                <p className="my-8 text-muted-foreground">
+                  "Quisque vel libero vehicula, egestas sem ac, mattis lacus.
+                  Pellentesque placerat semper fermentum. Curabitur congue id
+                  ipsum sit amet ullamcorper. Nulla id est sit amet sapien
+                  ornare facilisis ut quis nulla. Integer ac lacus quis quam
+                  sollicitudin porttitor eu vel lectus. Aenean at elit non nisl
+                  convallis aliquam. Curabitur nec blandit nulla. Cras
+                  condimentum pharetra libero, ut ullamcorper"
+                </p>
+
+                <div className="flex gap-4">
+                  <Avatar>
+                    <AvatarImage
+                      alt="Kristi Shellen"
+                      src="/img/avatar/female-avatar-2.jpg"
+                    />
+                    <AvatarFallback>KS</AvatarFallback>
+                  </Avatar>
+                  <div>
+                    <h6 className="text-sm">Kristi Shellen</h6>
+                    <p className="text-xs text-muted-foreground">COO of Meta</p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="p-6">
+                <div className="flex gap-1">
+                  <StarIcon
+                    className="fill-yellow-600 stroke-yellow-600"
+                    size={16}
+                  />
+                  <StarIcon
+                    className="fill-yellow-600 stroke-yellow-600"
+                    size={16}
+                  />
+                  <StarIcon
+                    className="fill-yellow-600 stroke-yellow-600"
+                    size={16}
+                  />
+                  <StarIcon
+                    className="fill-yellow-600 stroke-yellow-600"
+                    size={16}
+                  />
+                  <StarIcon size={16} />
+                </div>
+                <p className="my-8 text-muted-foreground">
+                  "Quisque vel libero vehicula, egestas sem ac, mattis lacus.
+                  Pellentesque placerat semper fermentum. Curabitur congue id
+                  ipsum sit amet ullamcorper. Nulla id est sit amet sapien
+                  ornare facilisis ut quis nulla."
+                </p>
+
+                <div className="flex gap-4">
+                  <Avatar>
+                    <AvatarImage
+                      alt="Jonny Cadden"
+                      src="/img/avatar/male-avatar-1.jpg"
+                    />
+                    <AvatarFallback>CN</AvatarFallback>
+                  </Avatar>
+                  <div>
+                    <h6 className="text-sm">Jonny Cadden</h6>
+                    <p className="text-xs text-muted-foreground">
+                      Co-Founder of Magnam
+                    </p>
+                  </div>
+                </div>
+              </CardContent>
+            </Card>
           </div>
         </div>
       </section>

@@ -359,13 +359,14 @@ export default function Home() {
                   />
                 </div>
                 <p className="my-8 text-muted-foreground">
-                  "Quisque vel libero vehicula, egestas sem ac, mattis lacus.
-                  Pellentesque placerat semper fermentum. Curabitur congue id
-                  ipsum sit amet ullamcorper. Nulla id est sit amet sapien
-                  ornare facilisis ut quis nulla. Cras condimentum pharetra
-                  libero, ut ullamcorper quam efficitur eget. Donec maximus
-                  purus ipsum, sit amet semper elit sodales id. Cras quis enim
-                  magna. Pellentesque maximus lacus ac lorem auctor efficitur."
+                  &quot;Quisque vel libero vehicula, egestas sem ac, mattis
+                  lacus. Pellentesque placerat semper fermentum. Curabitur
+                  congue id ipsum sit amet ullamcorper. Nulla id est sit amet
+                  sapien ornare facilisis ut quis nulla. Cras condimentum
+                  pharetra libero, ut ullamcorper quam efficitur eget. Donec
+                  maximus purus ipsum, sit amet semper elit sodales id. Cras
+                  quis enim magna. Pellentesque maximus lacus ac lorem auctor
+                  efficitur.&quot;
                 </p>
 
                 <div className="flex gap-4">
@@ -407,13 +408,13 @@ export default function Home() {
                   <StarIcon size={16} />
                 </div>
                 <p className="my-8 text-muted-foreground">
-                  "Quisque vel libero vehicula, egestas sem ac, mattis lacus.
-                  Pellentesque placerat semper fermentum. Curabitur congue id
-                  ipsum sit amet ullamcorper. Nulla id est sit amet sapien
-                  ornare facilisis ut quis nulla. Integer ac lacus quis quam
-                  sollicitudin porttitor eu vel lectus. Aenean at elit non nisl
-                  convallis aliquam. Curabitur nec blandit nulla. Cras
-                  condimentum pharetra libero, ut ullamcorper"
+                  &quot;Quisque vel libero vehicula, egestas sem ac, mattis
+                  lacus. Pellentesque placerat semper fermentum. Curabitur
+                  congue id ipsum sit amet ullamcorper. Nulla id est sit amet
+                  sapien ornare facilisis ut quis nulla. Integer ac lacus quis
+                  quam sollicitudin porttitor eu vel lectus. Aenean at elit non
+                  nisl convallis aliquam. Curabitur nec blandit nulla. Cras
+                  condimentum pharetra libero, ut ullamcorper&quot;
                 </p>
 
                 <div className="flex gap-4">
@@ -458,10 +459,10 @@ export default function Home() {
                   <StarIcon size={16} />
                 </div>
                 <p className="my-8 text-muted-foreground">
-                  "Quisque vel libero vehicula, egestas sem ac, mattis lacus.
-                  Pellentesque placerat semper fermentum. Curabitur congue id
-                  ipsum sit amet ullamcorper. Nulla id est sit amet sapien
-                  ornare facilisis ut quis nulla."
+                  &quot;Quisque vel libero vehicula, egestas sem ac, mattis
+                  lacus. Pellentesque placerat semper fermentum. Curabitur
+                  congue id ipsum sit amet ullamcorper. Nulla id est sit amet
+                  sapien ornare facilisis ut quis nulla.&quot;
                 </p>
 
                 <div className="flex gap-4">
@@ -506,7 +507,7 @@ export default function Home() {
                   />
                 </div>
                 <p className="my-8 text-muted-foreground">
-                  "Nulla tristique nisl in sapien sollicitudin, eu pharetra
+                  &quot;Nulla tristique nisl in sapien sollicitudin, eu pharetra
                   sapien tempor. Sed tempus ut nunc malesuada mollis. Etiam
                   vestibulum elit vel felis placerat, sit amet sagittis neque
                   dignissim. Lorem ipsum dolor sit amet, consectetur adipiscing
@@ -517,7 +518,7 @@ export default function Home() {
                   condimentum pharetra libero, ut ullamcorper quam efficitur
                   eget. Donec maximus purus ipsum, sit amet semper elit sodales
                   id. Cras quis enim magna. Pellentesque maximus lacus ac lorem
-                  auctor efficitur."
+                  auctor efficitur.&quot;
                 </p>
 
                 <div className="flex gap-4">
@@ -565,13 +566,13 @@ export default function Home() {
                   />
                 </div>
                 <p className="my-8 text-muted-foreground">
-                  "Quisque vel libero vehicula, egestas sem ac, mattis lacus.
-                  Pellentesque placerat semper fermentum. Curabitur congue id
-                  ipsum sit amet ullamcorper. Nulla id est sit amet sapien
-                  ornare facilisis ut quis nulla. Integer ac lacus quis quam
-                  sollicitudin porttitor eu vel lectus. Aenean at elit non nisl
-                  convallis aliquam. Curabitur nec blandit nulla. Cras
-                  condimentum pharetra libero, ut ullamcorper"
+                  &quot;Quisque vel libero vehicula, egestas sem ac, mattis
+                  lacus. Pellentesque placerat semper fermentum. Curabitur
+                  congue id ipsum sit amet ullamcorper. Nulla id est sit amet
+                  sapien ornare facilisis ut quis nulla. Integer ac lacus quis
+                  quam sollicitudin porttitor eu vel lectus. Aenean at elit non
+                  nisl convallis aliquam. Curabitur nec blandit nulla. Cras
+                  condimentum pharetra libero, ut ullamcorper&quot;
                 </p>
 
                 <div className="flex gap-4">
@@ -611,10 +612,10 @@ export default function Home() {
                   <StarIcon size={16} />
                 </div>
                 <p className="my-8 text-muted-foreground">
-                  "Quisque vel libero vehicula, egestas sem ac, mattis lacus.
-                  Pellentesque placerat semper fermentum. Curabitur congue id
-                  ipsum sit amet ullamcorper. Nulla id est sit amet sapien
-                  ornare facilisis ut quis nulla."
+                  &quot;Quisque vel libero vehicula, egestas sem ac, mattis
+                  lacus. Pellentesque placerat semper fermentum. Curabitur
+                  congue id ipsum sit amet ullamcorper. Nulla id est sit amet
+                  sapien ornare facilisis ut quis nulla.&quot;
                 </p>
 
                 <div className="flex gap-4">

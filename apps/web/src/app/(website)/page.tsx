@@ -15,10 +15,13 @@ import {
   AppWindowIcon,
   BellRingIcon,
   CheckIcon,
+  FacebookIcon,
+  LinkedinIcon,
   MessageSquareTextIcon,
   PhoneIcon,
   ShoppingCartIcon,
   StarIcon,
+  TwitterIcon,
 } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -625,6 +628,178 @@ export default function Home() {
               </CardContent>
             </Card>
           </div>
+        </div>
+      </section>
+
+      <section className="container flex flex-col gap-16 py-24">
+        <div className="max-w-[540px] self-center text-center">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl">
+            Our Innovation Team
+          </h1>
+          <p className="mt-4 text-muted-foreground">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            semper ligula eu elementum molestie. Quisque tristique lectus ut
+            purus congue.
+          </p>
+        </div>
+
+        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+          <Card>
+            <CardContent className="flex flex-col items-center gap-6 p-6 text-center">
+              <Image
+                alt="Michael Hudson"
+                className="rounded-full"
+                height={128}
+                src="/img/avatar/male-avatar-4.jpg"
+                width={128}
+              />
+
+              <div>
+                <h4>Michael Hudson</h4>
+                <p className="text-sm text-muted-foreground">
+                  Creative Designer
+                </p>
+              </div>
+
+              <div className="flex gap-6">
+                <Link href="#">
+                  <FacebookIcon
+                    className="fill-muted-foreground stroke-muted-foreground"
+                    size={20}
+                  />
+                </Link>
+                <Link href="#">
+                  <LinkedinIcon
+                    className="fill-muted-foreground stroke-muted-foreground"
+                    size={20}
+                  />
+                </Link>
+                <Link href="#">
+                  <TwitterIcon
+                    className="fill-muted-foreground stroke-muted-foreground"
+                    size={20}
+                  />
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent className="flex flex-col items-center gap-6 p-6 text-center">
+              <Image
+                alt="Julia Daniels"
+                className="rounded-full"
+                height={128}
+                src="/img/avatar/female-avatar-1.jpg"
+                width={128}
+              />
+
+              <div>
+                <h4>Julia Daniels</h4>
+                <p className="text-sm text-muted-foreground">
+                  Marketing Manager
+                </p>
+              </div>
+
+              <div className="flex gap-6">
+                <Link href="#">
+                  <FacebookIcon
+                    className="fill-muted-foreground stroke-muted-foreground"
+                    size={20}
+                  />
+                </Link>
+                <Link href="#">
+                  <LinkedinIcon
+                    className="fill-muted-foreground stroke-muted-foreground"
+                    size={20}
+                  />
+                </Link>
+                <Link href="#">
+                  <TwitterIcon
+                    className="fill-muted-foreground stroke-muted-foreground"
+                    size={20}
+                  />
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent className="flex flex-col items-center gap-6 p-6 text-center">
+              <Image
+                alt="Robert Sanders"
+                className="rounded-full"
+                height={128}
+                src="/img/avatar/male-avatar-3.jpg"
+                width={128}
+              />
+
+              <div>
+                <h4>Robert Sanders</h4>
+                <p className="text-sm text-muted-foreground">
+                  Chief Financial Officer
+                </p>
+              </div>
+
+              <div className="flex gap-6">
+                <Link href="#">
+                  <FacebookIcon
+                    className="fill-muted-foreground stroke-muted-foreground"
+                    size={20}
+                  />
+                </Link>
+                <Link href="#">
+                  <LinkedinIcon
+                    className="fill-muted-foreground stroke-muted-foreground"
+                    size={20}
+                  />
+                </Link>
+                <Link href="#">
+                  <TwitterIcon
+                    className="fill-muted-foreground stroke-muted-foreground"
+                    size={20}
+                  />
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
+          <Card>
+            <CardContent className="flex flex-col items-center gap-6 p-6 text-center">
+              <Image
+                alt="Melissa Ferrel"
+                className="rounded-full"
+                height={128}
+                src="/img/avatar/female-avatar-2.jpg"
+                width={128}
+              />
+
+              <div>
+                <h4>Melissa Ferrel</h4>
+                <p className="text-sm text-muted-foreground">
+                  Software Engineer
+                </p>
+              </div>
+
+              <div className="flex gap-6">
+                <Link href="#">
+                  <FacebookIcon
+                    className="fill-muted-foreground stroke-muted-foreground"
+                    size={20}
+                  />
+                </Link>
+                <Link href="#">
+                  <LinkedinIcon
+                    className="fill-muted-foreground stroke-muted-foreground"
+                    size={20}
+                  />
+                </Link>
+                <Link href="#">
+                  <TwitterIcon
+                    className="fill-muted-foreground stroke-muted-foreground"
+                    size={20}
+                  />
+                </Link>
+              </div>
+            </CardContent>
+          </Card>
         </div>
       </section>
     </main>

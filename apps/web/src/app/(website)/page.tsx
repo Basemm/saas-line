@@ -169,7 +169,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container flex flex-col gap-16">
+      <section className="container my-8 flex flex-col gap-16">
         <div className="max-w-[540px] self-center text-center">
           <h1 className="text-2xl md:text-4xl lg:text-5xl">Main Features</h1>
           <p className="mt-4 text-muted-foreground">
@@ -228,6 +228,20 @@ export default function Home() {
               Learn more
             </Link>
           </div>
+        </div>
+      </section>
+
+      <section className="my-8 bg-blue-700 py-28">
+        <div className="container flex max-w-[760px] flex-col items-center justify-center text-center">
+          <h1 className="text-2xl text-white md:text-4xl lg:text-5xl">
+            Want to Launch as Soon as Possible?
+          </h1>
+          <p className="my-6 max-w-[540px] text-center text-base text-white">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            semper ligula eu elementum molestie.
+          </p>
+
+          <Button size="lg">Get Started</Button>
         </div>
       </section>
     </main>

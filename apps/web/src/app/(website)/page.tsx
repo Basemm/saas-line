@@ -4,12 +4,21 @@ import IndofoodLogo from '@/app/(website)/_components/logos/indofoodLogo'
 import RevelLogo from '@/app/(website)/_components/logos/revelLogo'
 import VMWareLogo from '@/app/(website)/_components/logos/vmwareLogo'
 import { Button } from '@repo/core-ui/components/ui/button'
-import { BellRingIcon, CheckIcon, MessageSquareTextIcon } from 'lucide-react'
+import {
+  AppleIcon,
+  AppWindowIcon,
+  BellRingIcon,
+  CheckIcon,
+  MessageSquareTextIcon,
+  PhoneIcon,
+  ShoppingCartIcon,
+} from 'lucide-react'
 import Image from 'next/image'
+import Link from 'next/link'
 
 export default function Home() {
   return (
-    <main className="h-[2000px]">
+    <main className="h-[4000px]">
       <section className="bg-blue-700 pt-32">
         <div className="container flex max-w-[760px] flex-col items-center justify-center text-center">
           <h1 className="text-2xl md:text-4xl lg:text-5xl">
@@ -156,6 +165,68 @@ export default function Home() {
 
               <h6 className="font-bold">Dynamic Failover</h6>
             </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="container flex flex-col gap-16">
+        <div className="max-w-[540px] self-center text-center">
+          <h1 className="text-2xl md:text-4xl lg:text-5xl">Main Features</h1>
+          <p className="mt-4 text-muted-foreground">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+            semper ligula eu elementum molestie. Quisque tristique lectus ut
+            purus congue.
+          </p>
+        </div>
+
+        <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="flex flex-col gap-2">
+            <span className="w-[64px] rounded-lg bg-blue-500 p-[14px] text-white">
+              <AppleIcon size={36} />
+            </span>
+            <h3 className="mt-4">ِSocial Authentication</h3>
+            <p className="text-muted-foreground">
+              Donec semper ligula eu elementum molestie. Quisque tristique.
+            </p>
+            <Link className="mt-4" href="#">
+              Learn more
+            </Link>
+          </div>
+          <div className="flex flex-col gap-2">
+            <span className="w-[64px] rounded-lg bg-blue-500 p-[14px] text-white">
+              <AppWindowIcon size={36} />
+            </span>
+            <h3 className="mt-4">Stripe Integration</h3>
+            <p className="text-muted-foreground">
+              Donec semper ligula eu elementum molestie. Quisque tristique.
+            </p>
+            <Link className="mt-4" href="#">
+              Learn more
+            </Link>
+          </div>
+          <div className="flex flex-col gap-2">
+            <span className="w-[64px] rounded-lg bg-blue-500 p-[14px] text-white">
+              <PhoneIcon size={36} />
+            </span>
+            <h3 className="mt-4">Code Quality</h3>
+            <p className="text-muted-foreground">
+              Donec semper ligula eu elementum molestie. Quisque tristique.
+            </p>
+            <Link className="mt-4" href="#">
+              Learn more
+            </Link>
+          </div>
+          <div className="flex flex-col gap-2">
+            <span className="w-[64px] rounded-lg bg-blue-500 p-[14px] text-white">
+              <ShoppingCartIcon size={36} />
+            </span>
+            <h3 className="mt-4">Extensive Support</h3>
+            <p className="text-muted-foreground">
+              Donec semper ligula eu elementum molestie. Quisque tristique.
+            </p>
+            <Link className="mt-4" href="#">
+              Learn more
+            </Link>
           </div>
         </div>
       </section>

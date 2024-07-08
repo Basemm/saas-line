@@ -611,14 +611,14 @@ export default function Home() {
                   <Avatar>
                     <AvatarImage
                       alt="Jonny Cadden"
-                      src="/img/avatar/male-avatar-1.jpg"
+                      src="/img/avatar/male-avatar-3.jpg"
                     />
                     <AvatarFallback>CN</AvatarFallback>
                   </Avatar>
                   <div>
-                    <h6 className="text-sm">Jonny Cadden</h6>
+                    <h6 className="text-sm">John Carmack</h6>
                     <p className="text-xs text-muted-foreground">
-                      Co-Founder of Magnam
+                      Creator of Doom
                     </p>
                   </div>
                 </div>

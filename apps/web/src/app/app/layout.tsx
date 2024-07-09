@@ -16,11 +16,11 @@ import {
   ChevronRightIcon,
   Home,
   LineChart,
+  MenuIcon,
   Monitor,
   Moon,
   Package,
-  Package2,
-  PanelLeft,
+  RocketIcon,
   Search,
   Settings,
   ShoppingCart,
@@ -98,8 +98,8 @@ export default function RootLayout({
                   className="group flex h-9 w-9 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:h-8 md:w-8 md:text-base"
                   href="#"
                 >
-                  <Package2 className="h-4 w-4 transition-all group-hover:scale-110" />
-                  <span className="sr-only">Acme Inc</span>
+                  <RocketIcon className="h-4 w-4 transition-all group-hover:scale-110" />
+                  <span className="sr-only">SaaS Line</span>
                 </Link>
                 <Tooltip>
                   <TooltipTrigger asChild>
@@ -183,49 +183,49 @@ export default function RootLayout({
               <Sheet>
                 <SheetTrigger asChild>
                   <Button className="sm:hidden" size="icon" variant="outline">
-                    <PanelLeft className="h-5 w-5" />
+                    <MenuIcon className="h-5 w-5" />
                     <span className="sr-only">Toggle Menu</span>
                   </Button>
                 </SheetTrigger>
-                <SheetContent className="sm:max-w-xs" side="left">
+                <SheetContent className="px-0 sm:max-w-xs" side="left">
                   <nav className="grid gap-6 text-lg font-medium">
                     <Link
-                      className="group flex h-10 w-10 shrink-0 items-center justify-center gap-2 rounded-full bg-primary text-lg font-semibold text-primary-foreground md:text-base"
+                      className="mb-6 flex items-center gap-2 pl-6 text-lg font-semibold"
                       href="#"
                     >
-                      <Package2 className="h-5 w-5 transition-all group-hover:scale-110" />
-                      <span className="sr-only">Acme Inc</span>
+                      <RocketIcon className="h-6 w-6" />
+                      <h1 className="px-1 text-2xl">SaaS Line</h1>
                     </Link>
                     <Link
-                      className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
+                      className="flex items-center gap-4 pl-6 text-foreground"
                       href="#"
                     >
                       <Home className="h-5 w-5" />
                       Dashboard
                     </Link>
                     <Link
-                      className="flex items-center gap-4 px-2.5 text-foreground"
+                      className="flex items-center gap-4 pl-6 text-muted-foreground hover:text-foreground"
                       href="#"
                     >
                       <ShoppingCart className="h-5 w-5" />
                       Orders
                     </Link>
                     <Link
-                      className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
+                      className="flex items-center gap-4 pl-6 text-muted-foreground hover:text-foreground"
                       href="#"
                     >
                       <Package className="h-5 w-5" />
                       Products
                     </Link>
                     <Link
-                      className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
+                      className="flex items-center gap-4 pl-6 text-muted-foreground hover:text-foreground"
                       href="#"
                     >
                       <Users2 className="h-5 w-5" />
                       Customers
                     </Link>
                     <Link
-                      className="flex items-center gap-4 px-2.5 text-muted-foreground hover:text-foreground"
+                      className="flex items-center gap-4 pl-6 text-muted-foreground hover:text-foreground"
                       href="#"
                     >
                       <LineChart className="h-5 w-5" />

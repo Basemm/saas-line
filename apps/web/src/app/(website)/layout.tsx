@@ -255,40 +255,37 @@ export default function RootLayout({
                       <RocketIcon className="h-6 w-6" />
                       <h1 className="px-1 text-2xl">SaaS Line</h1>
                     </Link>
-                    <Link
-                      className="pl-6 text-foreground hover:bg-inherit hover:text-muted-foreground focus:bg-inherit focus:text-muted-foreground data-[state=open]:bg-inherit"
-                      href="#"
-                    >
+                    <Link className="pl-6 text-foreground" href="#">
                       Home
                     </Link>
                     <Link
-                      className="pl-6 text-foreground hover:bg-inherit hover:text-muted-foreground focus:bg-inherit focus:text-muted-foreground data-[state=open]:bg-inherit"
+                      className="pl-6 text-muted-foreground hover:text-foreground"
                       href="#"
                     >
                       Pricing
                     </Link>
                     <Link
-                      className="pl-6 text-foreground hover:bg-inherit hover:text-muted-foreground focus:bg-inherit focus:text-muted-foreground data-[state=open]:bg-inherit"
+                      className="pl-6 text-muted-foreground hover:text-foreground"
                       href="#"
                     >
                       Blog
                     </Link>
                     <Link
-                      className="pl-6 text-foreground hover:bg-inherit hover:text-muted-foreground focus:bg-inherit focus:text-muted-foreground data-[state=open]:bg-inherit"
+                      className="pl-6 text-muted-foreground hover:text-foreground"
                       href="#"
                     >
                       About
                     </Link>
                     <Collapsible className="grid gap-1">
-                      <CollapsibleTrigger className="-mt-1 flex items-center justify-between rounded-md px-4 py-2 pl-6 transition-colors hover:bg-gray-200 dark:hover:bg-gray-800">
+                      <CollapsibleTrigger className="-mt-1 flex items-center justify-between rounded-md px-4 py-2 pl-6 text-muted-foreground transition-colors hover:bg-gray-200 hover:text-foreground dark:hover:bg-gray-800">
                         Pages
                         <ChevronRightIcon className="h-5 w-5 transition-transform [&[data-state=open]]:rotate-90" />
                       </CollapsibleTrigger>
                       <CollapsibleContent className="space-y-1 pl-4">
-                        <ul className="my-0 flex list-none flex-col gap-6 pt-4 text-sm font-medium [&>li]:mt-0">
+                        <ul className="my-0 flex list-none flex-col gap-6 pt-4 text-base font-medium [&>li]:mt-0">
                           <li>
                             <Link
-                              className="hover:text-muted-foreground"
+                              className="text-muted-foreground hover:text-foreground"
                               href="#"
                             >
                               Pricing
@@ -296,7 +293,7 @@ export default function RootLayout({
                           </li>
                           <li>
                             <Link
-                              className="hover:text-muted-foreground"
+                              className="text-muted-foreground hover:text-foreground"
                               href="#"
                             >
                               About
@@ -304,7 +301,7 @@ export default function RootLayout({
                           </li>
                           <li>
                             <Link
-                              className="hover:text-muted-foreground"
+                              className="text-muted-foreground hover:text-foreground"
                               href="#"
                             >
                               Blog List
@@ -312,7 +309,7 @@ export default function RootLayout({
                           </li>
                           <li>
                             <Link
-                              className="hover:text-muted-foreground"
+                              className="text-muted-foreground hover:text-foreground"
                               href="#"
                             >
                               Blog Post
@@ -320,7 +317,7 @@ export default function RootLayout({
                           </li>
                           <li>
                             <Link
-                              className="hover:text-muted-foreground"
+                              className="text-muted-foreground hover:text-foreground"
                               href="#"
                             >
                               404 Error

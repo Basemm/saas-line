@@ -329,10 +329,10 @@ export default function RootLayout({
                   </nav>
 
                   <div className="flex flex-col gap-6 p-6">
-                    <Button asChild variant="outline">
+                    <Button asChild size="lg" variant="outline">
                       <Link href="/app">Login</Link>
                     </Button>
-                    <Button>Sign Up</Button>
+                    <Button size="lg">Sign Up</Button>
                   </div>
                 </SheetContent>
               </Sheet>

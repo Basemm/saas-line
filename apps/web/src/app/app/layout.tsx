@@ -43,7 +43,6 @@ import {
   BreadcrumbItem,
   BreadcrumbLink,
   BreadcrumbList,
-  BreadcrumbPage,
   BreadcrumbSeparator,
 } from '@repo/core-ui/components/ui/breadcrumb'
 import { Button } from '@repo/core-ui/components/ui/button'
@@ -245,12 +244,8 @@ export default function RootLayout({
                   <BreadcrumbSeparator />
                   <BreadcrumbItem>
                     <BreadcrumbLink asChild>
-                      <Link href="#">AWS</Link>
+                      <Link href="#">Main</Link>
                     </BreadcrumbLink>
-                  </BreadcrumbItem>
-                  <BreadcrumbSeparator />
-                  <BreadcrumbItem>
-                    <BreadcrumbPage>Recent Orders</BreadcrumbPage>
                   </BreadcrumbItem>
                 </BreadcrumbList>
               </Breadcrumb>

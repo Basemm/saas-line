@@ -57,7 +57,7 @@ export default function RootLayout({
         )}
       >
         <div className="flex min-h-screen w-full flex-col">
-          <header className="bg-background/1 fixed top-0 flex h-16 w-full items-center px-4 backdrop-blur-sm md:px-6">
+          <header className="bg-background/1 fixed top-0 z-40 flex h-16 w-full items-center px-4 backdrop-blur-sm md:px-6">
             <div className="container flex w-full items-center justify-between gap-4">
               <Link
                 className="flex items-center gap-2 text-lg font-semibold md:text-base"

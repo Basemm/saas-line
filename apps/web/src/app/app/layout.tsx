@@ -394,7 +394,7 @@ export default function RootLayout({
 
                     <Link
                       className="px-4 py-2 text-base font-medium hover:text-muted-foreground"
-                      href="#"
+                      href="/"
                     >
                       Logout
                     </Link>
@@ -468,7 +468,9 @@ export default function RootLayout({
                     </MenubarSub>
                     <MenubarItem>Support</MenubarItem>
                     <MenubarSeparator className="my-2" />
-                    <MenubarItem>Logout</MenubarItem>
+                    <MenubarItem>
+                      <Link href="/">Logout</Link>
+                    </MenubarItem>
                   </MenubarContent>
                 </MenubarMenu>
               </Menubar>

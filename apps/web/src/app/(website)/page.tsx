@@ -41,7 +41,7 @@ import FacebookLogo from './_components/logos/facebookLogo'
 
 export default function Home() {
   return (
-    <main className="h-[4000px]">
+    <main>
       <section className="bg-blue-700 pt-32">
         <div className="container flex max-w-[760px] flex-col items-center justify-center text-center">
           <h1 className="text-2xl md:text-4xl lg:text-5xl">

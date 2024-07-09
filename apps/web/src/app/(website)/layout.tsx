@@ -67,7 +67,7 @@ export default function RootLayout({
             <div className="container flex w-full items-center justify-between gap-4">
               <Link
                 className="flex items-center gap-2 text-lg font-semibold md:text-base"
-                href="#"
+                href="/"
               >
                 <RocketIcon className="h-6 w-6" />
                 <h1 className="px-1 text-2xl">SaaS Line</h1>
@@ -83,7 +83,7 @@ export default function RootLayout({
                       >
                         <Link
                           className="select-none text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                          href="#"
+                          href="/"
                         >
                           Home
                         </Link>
@@ -109,7 +109,7 @@ export default function RootLayout({
                       >
                         <Link
                           className="select-none text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                          href="#"
+                          href="/blog"
                         >
                           Blog
                         </Link>
@@ -174,7 +174,7 @@ export default function RootLayout({
                             <NavigationMenuLink asChild>
                               <Link
                                 className="flex select-none gap-4 space-y-1 rounded-md p-3 pl-6 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                                href="#"
+                                href="/blog"
                               >
                                 <LayoutListIcon className="self-center" />
                                 <div>
@@ -256,12 +256,12 @@ export default function RootLayout({
                   <nav className="grid gap-6 text-lg font-medium">
                     <Link
                       className="mb-6 flex items-center gap-2 pl-6 text-lg font-semibold"
-                      href="#"
+                      href="/"
                     >
                       <RocketIcon className="h-6 w-6" />
                       <h1 className="px-1 text-2xl">SaaS Line</h1>
                     </Link>
-                    <Link className="pl-6 text-foreground" href="#">
+                    <Link className="pl-6 text-foreground" href="/">
                       Home
                     </Link>
                     <Link
@@ -272,7 +272,7 @@ export default function RootLayout({
                     </Link>
                     <Link
                       className="pl-6 text-muted-foreground hover:text-foreground"
-                      href="#"
+                      href="/blog"
                     >
                       Blog
                     </Link>

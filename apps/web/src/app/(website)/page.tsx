@@ -138,7 +138,7 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-blue-50 dark:bg-blue-950">
+      <section className="bg-slate-100 dark:bg-slate-900">
         <div className="container grid gap-6 py-24 md:grid-cols-2 md:gap-16">
           <Image
             alt="Cloud Network"
@@ -254,79 +254,66 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="bg-blue-700">
-        <div className="container flex max-w-[760px] flex-col items-center justify-center py-24 text-center">
-          <h1 className="text-2xl text-white md:text-4xl lg:text-5xl">
-            Want to Launch as Soon as Possible?
-          </h1>
-          <p className="my-6 max-w-[540px] text-center text-base text-white">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            semper ligula eu elementum molestie.
-          </p>
-
-          <Button size="lg">Get Started</Button>
-        </div>
-      </section>
-
-      <section className="container flex flex-col gap-16 py-24">
-        <div className="max-w-[540px] self-center text-center">
-          <h1 className="text-2xl md:text-4xl lg:text-5xl">
-            Frequently Asked Questions?
-          </h1>
-          <p className="mt-4 text-muted-foreground">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            semper ligula eu elementum molestie. Quisque tristique lectus ut
-            purus congue.
-          </p>
-        </div>
-
-        <div className="grid gap-24 lg:grid-cols-2">
-          <div className="flex gap-8">
-            <span className="h-[64px] w-[64px] rounded-lg bg-blue-500 p-[14px] text-white">
-              <AppleIcon size={36} />
-            </span>
-            <div>
-              <h3>How long do you retain data?</h3>
-              <p className="mt-6 text-muted-foreground">
-                Donec semper ligula eu elementum molestie. Quisque tristique.
-              </p>
+      <div className="bg-slate-100 dark:bg-slate-900">
+        <section className="container flex flex-col gap-16 py-24">
+          <div className="max-w-[540px] self-center text-center">
+            <h1 className="text-2xl md:text-4xl lg:text-5xl">
+              Frequently Asked Questions?
+            </h1>
+            <p className="mt-4 text-muted-foreground">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              semper ligula eu elementum molestie. Quisque tristique lectus ut
+              purus congue.
+            </p>
+          </div>
+          <div className="grid gap-24 lg:grid-cols-2">
+            <div className="flex gap-8">
+              <span className="h-[64px] w-[64px] rounded-lg bg-blue-500 p-[14px] text-white">
+                <AppleIcon size={36} />
+              </span>
+              <div>
+                <h3>How long do you retain data?</h3>
+                <p className="mt-6 text-muted-foreground">
+                  Donec semper ligula eu elementum molestie. Quisque tristique.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-8">
+              <span className="h-[64px] w-[64px] rounded-lg bg-blue-500 p-[14px] text-white">
+                <AppWindowIcon size={36} />
+              </span>
+              <div>
+                <h3>Is there a free trial on paid plans?</h3>
+                <p className="mt-6 text-muted-foreground">
+                  Donec semper ligula eu elementum molestie. Quisque tristique.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-8">
+              <span className="h-[64px] w-[64px] rounded-lg bg-blue-500 p-[14px] text-white">
+                <PhoneIcon size={36} />
+              </span>
+              <div>
+                <h3>Do you offer a discount for non-profits?</h3>
+                <p className="mt-6 text-muted-foreground">
+                  Donec semper ligula eu elementum molestie. Quisque tristique.
+                </p>
+              </div>
+            </div>
+            <div className="flex gap-8">
+              <span className="h-[64px] w-[64px] rounded-lg bg-blue-500 p-[14px] text-white">
+                <ShoppingCartIcon size={36} />
+              </span>
+              <div>
+                <h3>Are there any annual commitments?</h3>
+                <p className="mt-6 text-muted-foreground">
+                  Donec semper ligula eu elementum molestie. Quisque tristique.
+                </p>
+              </div>
             </div>
           </div>
-          <div className="flex gap-8">
-            <span className="h-[64px] w-[64px] rounded-lg bg-blue-500 p-[14px] text-white">
-              <AppWindowIcon size={36} />
-            </span>
-            <div>
-              <h3>Is there a free trial on paid plans?</h3>
-              <p className="mt-6 text-muted-foreground">
-                Donec semper ligula eu elementum molestie. Quisque tristique.
-              </p>
-            </div>
-          </div>
-          <div className="flex gap-8">
-            <span className="h-[64px] w-[64px] rounded-lg bg-blue-500 p-[14px] text-white">
-              <PhoneIcon size={36} />
-            </span>
-            <div>
-              <h3>Do you offer a discount for non-profits?</h3>
-              <p className="mt-6 text-muted-foreground">
-                Donec semper ligula eu elementum molestie. Quisque tristique.
-              </p>
-            </div>
-          </div>
-          <div className="flex gap-8">
-            <span className="h-[64px] w-[64px] rounded-lg bg-blue-500 p-[14px] text-white">
-              <ShoppingCartIcon size={36} />
-            </span>
-            <div>
-              <h3>Are there any annual commitments?</h3>
-              <p className="mt-6 text-muted-foreground">
-                Donec semper ligula eu elementum molestie. Quisque tristique.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
+        </section>
+      </div>
 
       <section className="container flex flex-col gap-16 py-24">
         <div className="max-w-[540px] self-center text-center">
@@ -645,175 +632,17 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="container flex flex-col gap-16 py-24">
-        <div className="max-w-[540px] self-center text-center">
-          <h1 className="text-2xl md:text-4xl lg:text-5xl">
-            Our Innovation Team
+      <section className="bg-blue-700">
+        <div className="container flex max-w-[760px] flex-col items-center justify-center py-24 text-center">
+          <h1 className="text-2xl text-white md:text-4xl lg:text-5xl">
+            Want to Launch as Soon as Possible?
           </h1>
-          <p className="mt-4 text-muted-foreground">
+          <p className="my-6 max-w-[540px] text-center text-base text-white">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
-            semper ligula eu elementum molestie. Quisque tristique lectus ut
-            purus congue.
+            semper ligula eu elementum molestie.
           </p>
-        </div>
 
-        <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
-          <Card>
-            <CardContent className="flex flex-col items-center gap-6 p-6 text-center">
-              <Image
-                alt="Michael Hudson"
-                className="rounded-full"
-                height={128}
-                src="/img/avatar/male-avatar-4.jpg"
-                width={128}
-              />
-
-              <div>
-                <h4>Michael Hudson</h4>
-                <p className="text-sm text-muted-foreground">
-                  Creative Designer
-                </p>
-              </div>
-
-              <div className="flex gap-6">
-                <Link href="#">
-                  <FacebookIcon
-                    className="fill-muted-foreground stroke-muted-foreground"
-                    size={20}
-                  />
-                </Link>
-                <Link href="#">
-                  <LinkedinIcon
-                    className="fill-muted-foreground stroke-muted-foreground"
-                    size={20}
-                  />
-                </Link>
-                <Link href="#">
-                  <TwitterIcon
-                    className="fill-muted-foreground stroke-muted-foreground"
-                    size={20}
-                  />
-                </Link>
-              </div>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardContent className="flex flex-col items-center gap-6 p-6 text-center">
-              <Image
-                alt="Julia Daniels"
-                className="rounded-full"
-                height={128}
-                src="/img/avatar/female-avatar-1.jpg"
-                width={128}
-              />
-
-              <div>
-                <h4>Julia Daniels</h4>
-                <p className="text-sm text-muted-foreground">
-                  Marketing Manager
-                </p>
-              </div>
-
-              <div className="flex gap-6">
-                <Link href="#">
-                  <FacebookIcon
-                    className="fill-muted-foreground stroke-muted-foreground"
-                    size={20}
-                  />
-                </Link>
-                <Link href="#">
-                  <LinkedinIcon
-                    className="fill-muted-foreground stroke-muted-foreground"
-                    size={20}
-                  />
-                </Link>
-                <Link href="#">
-                  <TwitterIcon
-                    className="fill-muted-foreground stroke-muted-foreground"
-                    size={20}
-                  />
-                </Link>
-              </div>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardContent className="flex flex-col items-center gap-6 p-6 text-center">
-              <Image
-                alt="Robert Sanders"
-                className="rounded-full"
-                height={128}
-                src="/img/avatar/male-avatar-3.jpg"
-                width={128}
-              />
-
-              <div>
-                <h4>Robert Sanders</h4>
-                <p className="text-sm text-muted-foreground">
-                  Chief Financial Officer
-                </p>
-              </div>
-
-              <div className="flex gap-6">
-                <Link href="#">
-                  <FacebookIcon
-                    className="fill-muted-foreground stroke-muted-foreground"
-                    size={20}
-                  />
-                </Link>
-                <Link href="#">
-                  <LinkedinIcon
-                    className="fill-muted-foreground stroke-muted-foreground"
-                    size={20}
-                  />
-                </Link>
-                <Link href="#">
-                  <TwitterIcon
-                    className="fill-muted-foreground stroke-muted-foreground"
-                    size={20}
-                  />
-                </Link>
-              </div>
-            </CardContent>
-          </Card>
-          <Card>
-            <CardContent className="flex flex-col items-center gap-6 p-6 text-center">
-              <Image
-                alt="Melissa Ferrel"
-                className="rounded-full"
-                height={128}
-                src="/img/avatar/female-avatar-2.jpg"
-                width={128}
-              />
-
-              <div>
-                <h4>Melissa Ferrel</h4>
-                <p className="text-sm text-muted-foreground">
-                  Software Engineer
-                </p>
-              </div>
-
-              <div className="flex gap-6">
-                <Link href="#">
-                  <FacebookIcon
-                    className="fill-muted-foreground stroke-muted-foreground"
-                    size={20}
-                  />
-                </Link>
-                <Link href="#">
-                  <LinkedinIcon
-                    className="fill-muted-foreground stroke-muted-foreground"
-                    size={20}
-                  />
-                </Link>
-                <Link href="#">
-                  <TwitterIcon
-                    className="fill-muted-foreground stroke-muted-foreground"
-                    size={20}
-                  />
-                </Link>
-              </div>
-            </CardContent>
-          </Card>
+          <Button size="lg">Get Started</Button>
         </div>
       </section>
 
@@ -971,6 +800,171 @@ export default function Home() {
           </Card>
         </div>
       </section>
+
+      <div className="bg-slate-100 dark:bg-slate-900">
+        <section className="container flex flex-col gap-16 py-24">
+          <div className="max-w-[540px] self-center text-center">
+            <h1 className="text-2xl md:text-4xl lg:text-5xl">
+              Our Innovation Team
+            </h1>
+            <p className="mt-4 text-muted-foreground">
+              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
+              semper ligula eu elementum molestie. Quisque tristique lectus ut
+              purus congue.
+            </p>
+          </div>
+          <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
+            <Card>
+              <CardContent className="flex flex-col items-center gap-6 p-6 text-center">
+                <Image
+                  alt="Michael Hudson"
+                  className="rounded-full"
+                  height={128}
+                  src="/img/avatar/male-avatar-4.jpg"
+                  width={128}
+                />
+                <div>
+                  <h4>Michael Hudson</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Creative Designer
+                  </p>
+                </div>
+                <div className="flex gap-6">
+                  <Link href="#">
+                    <FacebookIcon
+                      className="fill-muted-foreground stroke-muted-foreground"
+                      size={20}
+                    />
+                  </Link>
+                  <Link href="#">
+                    <LinkedinIcon
+                      className="fill-muted-foreground stroke-muted-foreground"
+                      size={20}
+                    />
+                  </Link>
+                  <Link href="#">
+                    <TwitterIcon
+                      className="fill-muted-foreground stroke-muted-foreground"
+                      size={20}
+                    />
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="flex flex-col items-center gap-6 p-6 text-center">
+                <Image
+                  alt="Julia Daniels"
+                  className="rounded-full"
+                  height={128}
+                  src="/img/avatar/female-avatar-1.jpg"
+                  width={128}
+                />
+                <div>
+                  <h4>Julia Daniels</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Marketing Manager
+                  </p>
+                </div>
+                <div className="flex gap-6">
+                  <Link href="#">
+                    <FacebookIcon
+                      className="fill-muted-foreground stroke-muted-foreground"
+                      size={20}
+                    />
+                  </Link>
+                  <Link href="#">
+                    <LinkedinIcon
+                      className="fill-muted-foreground stroke-muted-foreground"
+                      size={20}
+                    />
+                  </Link>
+                  <Link href="#">
+                    <TwitterIcon
+                      className="fill-muted-foreground stroke-muted-foreground"
+                      size={20}
+                    />
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="flex flex-col items-center gap-6 p-6 text-center">
+                <Image
+                  alt="Robert Sanders"
+                  className="rounded-full"
+                  height={128}
+                  src="/img/avatar/male-avatar-3.jpg"
+                  width={128}
+                />
+                <div>
+                  <h4>Robert Sanders</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Chief Financial Officer
+                  </p>
+                </div>
+                <div className="flex gap-6">
+                  <Link href="#">
+                    <FacebookIcon
+                      className="fill-muted-foreground stroke-muted-foreground"
+                      size={20}
+                    />
+                  </Link>
+                  <Link href="#">
+                    <LinkedinIcon
+                      className="fill-muted-foreground stroke-muted-foreground"
+                      size={20}
+                    />
+                  </Link>
+                  <Link href="#">
+                    <TwitterIcon
+                      className="fill-muted-foreground stroke-muted-foreground"
+                      size={20}
+                    />
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
+            <Card>
+              <CardContent className="flex flex-col items-center gap-6 p-6 text-center">
+                <Image
+                  alt="Melissa Ferrel"
+                  className="rounded-full"
+                  height={128}
+                  src="/img/avatar/female-avatar-2.jpg"
+                  width={128}
+                />
+                <div>
+                  <h4>Melissa Ferrel</h4>
+                  <p className="text-sm text-muted-foreground">
+                    Software Engineer
+                  </p>
+                </div>
+                <div className="flex gap-6">
+                  <Link href="#">
+                    <FacebookIcon
+                      className="fill-muted-foreground stroke-muted-foreground"
+                      size={20}
+                    />
+                  </Link>
+                  <Link href="#">
+                    <LinkedinIcon
+                      className="fill-muted-foreground stroke-muted-foreground"
+                      size={20}
+                    />
+                  </Link>
+                  <Link href="#">
+                    <TwitterIcon
+                      className="fill-muted-foreground stroke-muted-foreground"
+                      size={20}
+                    />
+                  </Link>
+                </div>
+              </CardContent>
+            </Card>
+          </div>
+        </section>
+      </div>
 
       <footer className="bg-blue-700">
         <div className="container grid gap-10 py-24 pb-8 md:grid-cols-[2fr_1fr_1fr] lg:grid-cols-[2fr_1fr_1fr_1fr_2fr]">

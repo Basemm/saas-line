@@ -7,10 +7,6 @@ export function useWindowScroll() {
   })
   const [isVerticalScrolling, setIsVerticalScrolling] = React.useState(false)
 
-  const scrollTo = React.useCallback((scrollToOptions: ScrollToOptions) => {
-    window.scrollTo(scrollToOptions)
-  }, [])
-
   React.useLayoutEffect(() => {
     const handleScroll = () => {
       setScrollPos({ x: window.scrollX, y: window.scrollY })
@@ -25,5 +21,5 @@ export function useWindowScroll() {
     }
   }, [])
 
-  return [isVerticalScrolling, scrollPos, scrollTo]
+  return [isVerticalScrolling, scrollPos]
 }

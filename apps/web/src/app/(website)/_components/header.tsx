@@ -1,3 +1,5 @@
+'use client'
+
 import { Button } from '@repo/core-ui/components/ui/button'
 import {
   Collapsible,
@@ -17,6 +19,8 @@ import {
   SheetContent,
   SheetTrigger,
 } from '@repo/core-ui/components/ui/sheet'
+import { cn } from '@repo/core-ui/lib/utils'
+import { useWindowScroll } from '@repo/utils/hooks/useWindowScroll'
 import {
   ChevronRightIcon,
   CircleDollarSignIcon,
@@ -30,8 +34,16 @@ import {
 import Link from 'next/link'
 
 export default function Header() {
+  const [isVerticalScrolling] = useWindowScroll()
   return (
-    <header className="bg-background/1 fixed top-0 z-40 flex h-16 w-full items-center px-4 backdrop-blur-sm md:px-6">
+    <header
+      className={cn(
+        'fixed top-0 z-40 flex h-16 w-full items-center px-4 md:px-6',
+        isVerticalScrolling
+          ? 'border-b bg-neutral-950/80 backdrop-blur-md'
+          : 'bg-transparent'
+      )}
+    >
       <div className="container flex w-full items-center justify-between gap-4">
         <Link
           className="flex items-center gap-2 text-lg font-semibold md:text-base"

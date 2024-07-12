@@ -120,7 +120,7 @@ export default function Home() {
         </div>
       </div>
 
-      <div className="container my-24 grid gap-20 lg:grid-cols-3 lg:gap-20">
+      <div className="container my-24 grid gap-16 lg:grid-cols-3">
         <div className="col-span-2 flex flex-col gap-2">
           <div className="mb-6">
             <h3>Latest Articles</h3>

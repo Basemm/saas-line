@@ -9,7 +9,7 @@ export default function Home() {
       <h1 className="mb-12 pb-6 pt-24 text-center">Blog</h1>
 
       <div className="container">
-        <div className="grid gap-16 rounded-md bg-muted p-8 shadow-lg lg:grid-cols-2">
+        <div className="grid gap-16 rounded-lg bg-muted p-8 shadow-lg lg:grid-cols-2">
           <div className="flex flex-col lg:justify-self-end">
             <Link href="#">
               <Image

@@ -50,7 +50,7 @@ export default function Home() {
                     Earth&apos;s rotating inner core is starting to slow down
                   </h4>
                   <p className="mt-2 text-muted-foreground">
-                    A new study confirms that.
+                    A new study confirms that, showing the latest measurements
                   </p>
                 </div>
               </Link>

@@ -24,7 +24,7 @@ export default function Home() {
           <header>
             <h1>Earth&apos;s rotating inner core is starting to slow down</h1>
             <p className="mb-6 text-muted-foreground">
-              A new study confirms that.
+              A new study confirms that, showing the latest measurements
             </p>
             <Image
               alt="Nature Sunset"

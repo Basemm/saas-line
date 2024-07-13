@@ -129,7 +129,7 @@ export default function Header() {
                   </NavigationMenuLink>
                 </NavigationMenuItem>
                 <NavigationMenuItem className="m-0 p-0">
-                  <NavigationMenuTrigger className="m-0 h-auto bg-inherit p-0 text-sm text-foreground hover:bg-inherit hover:text-muted-foreground data-[state=open]:bg-inherit">
+                  <NavigationMenuTrigger className="m-0 h-auto bg-inherit p-0 text-sm text-foreground hover:bg-inherit hover:text-muted-foreground focus:bg-inherit focus:text-muted-foreground data-[state=open]:bg-inherit">
                     Pages
                   </NavigationMenuTrigger>
                   <NavigationMenuContent>

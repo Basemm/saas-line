@@ -66,8 +66,8 @@ export default function DateRangeSelector() {
   }
 
   return (
-    <div className="mb-8 flex items-center justify-center gap-4">
-      <Label className="text-lg">Date Range</Label>
+    <div className="my-8 flex flex-wrap items-center justify-center gap-4">
+      <Label className="shrink-0 text-lg">Date Range</Label>
       <Select
         onOpenChange={setIsDateRangeSelectorOpen}
         onValueChange={setDateRange}

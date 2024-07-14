@@ -38,7 +38,7 @@ export default function Home() {
     <main>
       <section className="bg-blue-700 pt-32">
         <div className="container flex max-w-[760px] flex-col items-center justify-center text-center">
-          <h1 className="text-2xl md:text-4xl lg:text-5xl">
+          <h1 className="text-2xl text-white md:text-4xl lg:text-5xl">
             SaaS Line the Fastest Way to Launch Your SaaS in No Time
           </h1>
           <p className="my-6 max-w-[540px] text-center text-base text-white">

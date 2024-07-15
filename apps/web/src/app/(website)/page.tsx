@@ -37,7 +37,7 @@ export default function Home() {
   return (
     <main>
       <section className="container flex max-w-[760px] flex-col items-center justify-center pt-16 text-center lg:pt-32">
-        <h1 className="text-2xl md:text-4xl lg:text-5xl">
+        <h1 className="text-3xl md:text-4xl lg:text-5xl">
           SaaS Line the Fastest Way to Launch Your SaaS in No Time
         </h1>
         <p className="my-6 max-w-[540px] text-center text-base">
@@ -94,7 +94,9 @@ export default function Home() {
             width={760}
           />
           <div className="order-last md:order-first">
-            <h1 className="mb-4">Mobile App</h1>
+            <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl">
+              Mobile App
+            </h2>
             <p className="mb-6 text-muted-foreground">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
               semper ligula eu elementum molestie. Quisque tristique lectus ut
@@ -141,7 +143,9 @@ export default function Home() {
           width={760}
         />
         <div>
-          <h1 className="mb-4">Cloud Computing</h1>
+          <h2 className="mb-4 text-2xl md:text-3xl lg:text-4xl">
+            Cloud Computing
+          </h2>
           <p className="mb-6 text-muted-foreground">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
             semper ligula eu elementum molestie. Quisque tristique lectus ut
@@ -187,7 +191,7 @@ export default function Home() {
       <section className="bg-slate-100 dark:bg-slate-900">
         <div className="container flex flex-col gap-16 py-24">
           <div className="max-w-[540px] self-center text-center">
-            <h1 className="text-2xl md:text-4xl lg:text-5xl">Main Features</h1>
+            <h2 className="text-2xl md:text-3xl lg:text-4xl">Main Features</h2>
             <p className="mt-4 text-muted-foreground">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
               semper ligula eu elementum molestie. Quisque tristique lectus ut
@@ -195,12 +199,12 @@ export default function Home() {
             </p>
           </div>
 
-          <div className="grid gap-6 md:grid-cols-2 lg:grid-cols-4">
+          <div className="grid gap-14 md:grid-cols-2 lg:grid-cols-4">
             <div className="flex flex-col gap-2">
               <span className="w-[64px] rounded-lg bg-blue-500 p-[14px] text-white">
                 <AppleIcon size={36} />
               </span>
-              <h3 className="mt-4">Social Authentication</h3>
+              <h4 className="mt-4">Social Authentication</h4>
               <p className="text-muted-foreground">
                 Donec semper ligula eu elementum molestie. Quisque tristique.
               </p>
@@ -212,7 +216,7 @@ export default function Home() {
               <span className="w-[64px] rounded-lg bg-blue-500 p-[14px] text-white">
                 <AppWindowIcon size={36} />
               </span>
-              <h3 className="mt-4">Stripe Integration</h3>
+              <h4 className="mt-4">Stripe Integration</h4>
               <p className="text-muted-foreground">
                 Donec semper ligula eu elementum molestie. Quisque tristique.
               </p>
@@ -224,7 +228,7 @@ export default function Home() {
               <span className="w-[64px] rounded-lg bg-blue-500 p-[14px] text-white">
                 <PhoneIcon size={36} />
               </span>
-              <h3 className="mt-4">Code Quality</h3>
+              <h4 className="mt-4">Code Quality</h4>
               <p className="text-muted-foreground">
                 Donec semper ligula eu elementum molestie. Quisque tristique.
               </p>
@@ -236,7 +240,7 @@ export default function Home() {
               <span className="w-[64px] rounded-lg bg-blue-500 p-[14px] text-white">
                 <ShoppingCartIcon size={36} />
               </span>
-              <h3 className="mt-4">Extensive Support</h3>
+              <h4 className="mt-4">Extensive Support</h4>
               <p className="text-muted-foreground">
                 Donec semper ligula eu elementum molestie. Quisque tristique.
               </p>
@@ -250,22 +254,22 @@ export default function Home() {
 
       <section className="container flex flex-col gap-16 py-24">
         <div className="max-w-[540px] self-center text-center">
-          <h1 className="text-2xl md:text-4xl lg:text-5xl">
+          <h2 className="text-2xl md:text-3xl lg:text-4xl">
             Frequently Asked Questions?
-          </h1>
+          </h2>
           <p className="mt-4 text-muted-foreground">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
             semper ligula eu elementum molestie. Quisque tristique lectus ut
             purus congue.
           </p>
         </div>
-        <div className="grid gap-24 lg:grid-cols-2">
+        <div className="grid gap-16 lg:grid-cols-2 lg:gap-24">
           <div className="flex gap-8">
             <span className="h-[64px] w-[64px] rounded-lg bg-blue-500 p-[14px] text-white">
               <AppleIcon size={36} />
             </span>
             <div>
-              <h3>How long do you retain data?</h3>
+              <h4>How long do you retain data?</h4>
               <p className="mt-6 text-muted-foreground">
                 Donec semper ligula eu elementum molestie. Quisque tristique.
               </p>
@@ -276,7 +280,7 @@ export default function Home() {
               <AppWindowIcon size={36} />
             </span>
             <div>
-              <h3>Is there a free trial on paid plans?</h3>
+              <h4>Is there a free trial on paid plans?</h4>
               <p className="mt-6 text-muted-foreground">
                 Donec semper ligula eu elementum molestie. Quisque tristique.
               </p>
@@ -287,7 +291,7 @@ export default function Home() {
               <PhoneIcon size={36} />
             </span>
             <div>
-              <h3>Do you offer a discount for non-profits?</h3>
+              <h4>Do you offer a discount for non-profits?</h4>
               <p className="mt-6 text-muted-foreground">
                 Donec semper ligula eu elementum molestie. Quisque tristique.
               </p>
@@ -298,7 +302,7 @@ export default function Home() {
               <ShoppingCartIcon size={36} />
             </span>
             <div>
-              <h3>Are there any annual commitments?</h3>
+              <h4>Are there any annual commitments?</h4>
               <p className="mt-6 text-muted-foreground">
                 Donec semper ligula eu elementum molestie. Quisque tristique.
               </p>
@@ -310,9 +314,9 @@ export default function Home() {
       <section className="bg-slate-100 dark:bg-slate-900">
         <div className="container flex flex-col gap-16 py-24">
           <div className="max-w-[540px] self-center text-center">
-            <h1 className="text-2xl md:text-4xl lg:text-5xl">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl">
               10K Clients Can&apos;t Be Wrong?
-            </h1>
+            </h2>
             <p className="mt-4 text-muted-foreground">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit.
             </p>
@@ -630,9 +634,9 @@ export default function Home() {
 
       <section className="bg-blue-700">
         <div className="container flex max-w-[760px] flex-col items-center justify-center py-24 text-center">
-          <h1 className="text-2xl text-white md:text-4xl lg:text-5xl">
+          <h2 className="text-2xl text-white md:text-3xl lg:text-4xl">
             Want to Launch as Soon as Possible?
-          </h1>
+          </h2>
           <p className="my-6 max-w-[540px] text-center text-base text-white">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
             semper ligula eu elementum molestie.
@@ -644,7 +648,7 @@ export default function Home() {
 
       <section className="container flex flex-col gap-16 py-24">
         <div className="max-w-[540px] self-center text-center">
-          <h1 className="text-2xl md:text-4xl lg:text-5xl">Pricing</h1>
+          <h2 className="text-2xl md:text-3xl lg:text-4xl">Pricing</h2>
           <p className="mt-4 text-muted-foreground">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
             semper ligula eu elementum molestie. Quisque tristique lectus ut
@@ -800,9 +804,9 @@ export default function Home() {
       <div className="bg-slate-100 dark:bg-slate-900">
         <section className="container flex flex-col gap-16 py-24">
           <div className="max-w-[540px] self-center text-center">
-            <h1 className="text-2xl md:text-4xl lg:text-5xl">
+            <h2 className="text-2xl md:text-3xl lg:text-4xl">
               Our Innovation Team
-            </h1>
+            </h2>
             <p className="mt-4 text-muted-foreground">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec
               semper ligula eu elementum molestie. Quisque tristique lectus ut

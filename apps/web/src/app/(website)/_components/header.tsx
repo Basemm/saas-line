@@ -96,7 +96,7 @@ export default function Header() {
                   >
                     <Link
                       className="select-none text-sm leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                      href="#"
+                      href="/pricing"
                     >
                       Pricing
                     </Link>
@@ -138,7 +138,7 @@ export default function Header() {
                         <NavigationMenuLink asChild>
                           <Link
                             className="flex select-none gap-4 space-y-1 rounded-md p-3 pl-6 leading-none no-underline outline-none transition-colors hover:bg-accent hover:text-accent-foreground focus:bg-accent focus:text-accent-foreground"
-                            href="#"
+                            href="/pricing"
                           >
                             <CircleDollarSignIcon className="self-center" />
                             <div>
@@ -266,7 +266,7 @@ export default function Header() {
                 </Link>
                 <Link
                   className="pl-6 text-muted-foreground hover:text-foreground"
-                  href="#"
+                  href="/pricing"
                 >
                   Pricing
                 </Link>
@@ -292,7 +292,7 @@ export default function Header() {
                       <li>
                         <Link
                           className="text-muted-foreground hover:text-foreground"
-                          href="#"
+                          href="/pricing"
                         >
                           Pricing
                         </Link>

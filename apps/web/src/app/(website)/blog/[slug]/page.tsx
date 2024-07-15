@@ -14,7 +14,7 @@ import { Input } from '@repo/core-ui/components/ui/input'
 import { InfoIcon } from 'lucide-react'
 import Image from 'next/image'
 
-export default function Home() {
+export default function BlogPost() {
   return (
     <main className="mb-32">
       <h1 className="mb-12 pb-6 pt-24 text-center">Blog Post</h1>

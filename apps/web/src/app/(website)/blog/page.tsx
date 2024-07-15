@@ -3,7 +3,7 @@ import { TagIcon } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
 
-export default function Home() {
+export default function Blog() {
   return (
     <main>
       <h1 className="mb-12 pb-6 pt-6 text-center">Blog</h1>

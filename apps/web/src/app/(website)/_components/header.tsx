@@ -58,9 +58,9 @@ export default function Header() {
 
       <header
         className={cn(
-          'fixed top-0 z-40 flex h-16 w-full items-center px-4 md:px-6',
+          'sticky top-0 z-40 flex h-16 w-full items-center px-4 md:px-6',
           isVerticalScrolling
-            ? 'border-b bg-neutral-950/80 backdrop-blur-md'
+            ? 'border-b bg-secondary/80 backdrop-blur-md dark:bg-neutral-950/80'
             : 'bg-transparent'
         )}
       >

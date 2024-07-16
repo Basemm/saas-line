@@ -21,7 +21,7 @@ export default function Pricing() {
       <section>
         <h1 className="mb-12 pb-6 pt-6 text-center">Pricing</h1>
 
-        <p className="mt-4 text-muted-foreground">
+        <p className="mt-4 pt-16 text-muted-foreground">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec semper
           ligula eu elementum molestie. Quisque tristique lectus ut purus
           congue.

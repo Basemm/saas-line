@@ -8,7 +8,7 @@ export default function Blog() {
     <main>
       <h1 className="mb-12 pb-6 pt-6 text-center">Blog</h1>
 
-      <div className="container">
+      <div className="container pt-16">
         <div className="grid gap-16 rounded-lg bg-muted p-8 shadow-lg lg:grid-cols-2">
           <div className="flex flex-col lg:justify-self-end">
             <Link href="#">

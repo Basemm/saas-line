@@ -1,8 +1,10 @@
 import ActivisionLogo from '@/app/(website)/_components/logos/activisionLogo'
 import GoogleLogo from '@/app/(website)/_components/logos/googleLogo'
 import IndofoodLogo from '@/app/(website)/_components/logos/indofoodLogo'
+import LinkedInLogo from '@/app/(website)/_components/logos/linkedInLogo'
 import RevelLogo from '@/app/(website)/_components/logos/revelLogo'
 import VMWareLogo from '@/app/(website)/_components/logos/vmwareLogo'
+import XLogo from '@/app/(website)/_components/logos/xLogo'
 import {
   Avatar,
   AvatarFallback,
@@ -22,13 +24,10 @@ import {
   AppWindowIcon,
   BellRingIcon,
   CheckIcon,
-  FacebookIcon,
-  LinkedinIcon,
   MessageSquareTextIcon,
   PhoneIcon,
   ShoppingCartIcon,
   StarIcon,
-  TwitterIcon,
 } from 'lucide-react'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -829,23 +828,17 @@ export default function Home() {
                     Creative Designer
                   </p>
                 </div>
-                <div className="flex gap-6">
-                  <Link href="#">
-                    <FacebookIcon
+                <div className="flex items-center gap-6">
+                  <Link href="#" title="LinkedIn">
+                    <LinkedInLogo
                       className="fill-muted-foreground stroke-muted-foreground"
-                      size={20}
+                      width={20}
                     />
                   </Link>
-                  <Link href="#">
-                    <LinkedinIcon
+                  <Link href="#" title="X">
+                    <XLogo
                       className="fill-muted-foreground stroke-muted-foreground"
-                      size={20}
-                    />
-                  </Link>
-                  <Link href="#">
-                    <TwitterIcon
-                      className="fill-muted-foreground stroke-muted-foreground"
-                      size={20}
+                      width={18}
                     />
                   </Link>
                 </div>
@@ -866,23 +859,17 @@ export default function Home() {
                     Marketing Manager
                   </p>
                 </div>
-                <div className="flex gap-6">
-                  <Link href="#">
-                    <FacebookIcon
+                <div className="flex items-center gap-6">
+                  <Link href="#" title="LinkedIn">
+                    <LinkedInLogo
                       className="fill-muted-foreground stroke-muted-foreground"
-                      size={20}
+                      width={20}
                     />
                   </Link>
-                  <Link href="#">
-                    <LinkedinIcon
+                  <Link href="#" title="X">
+                    <XLogo
                       className="fill-muted-foreground stroke-muted-foreground"
-                      size={20}
-                    />
-                  </Link>
-                  <Link href="#">
-                    <TwitterIcon
-                      className="fill-muted-foreground stroke-muted-foreground"
-                      size={20}
+                      width={18}
                     />
                   </Link>
                 </div>
@@ -903,23 +890,17 @@ export default function Home() {
                     Chief Financial Officer
                   </p>
                 </div>
-                <div className="flex gap-6">
-                  <Link href="#">
-                    <FacebookIcon
+                <div className="flex items-center gap-6">
+                  <Link href="#" title="LinkedIn">
+                    <LinkedInLogo
                       className="fill-muted-foreground stroke-muted-foreground"
-                      size={20}
+                      width={20}
                     />
                   </Link>
-                  <Link href="#">
-                    <LinkedinIcon
+                  <Link href="#" title="X">
+                    <XLogo
                       className="fill-muted-foreground stroke-muted-foreground"
-                      size={20}
-                    />
-                  </Link>
-                  <Link href="#">
-                    <TwitterIcon
-                      className="fill-muted-foreground stroke-muted-foreground"
-                      size={20}
+                      width={18}
                     />
                   </Link>
                 </div>
@@ -940,23 +921,17 @@ export default function Home() {
                     Software Engineer
                   </p>
                 </div>
-                <div className="flex gap-6">
-                  <Link href="#">
-                    <FacebookIcon
+                <div className="flex items-center gap-6">
+                  <Link href="#" title="LinkedIn">
+                    <LinkedInLogo
                       className="fill-muted-foreground stroke-muted-foreground"
-                      size={20}
+                      width={20}
                     />
                   </Link>
-                  <Link href="#">
-                    <LinkedinIcon
+                  <Link href="#" title="X">
+                    <XLogo
                       className="fill-muted-foreground stroke-muted-foreground"
-                      size={20}
-                    />
-                  </Link>
-                  <Link href="#">
-                    <TwitterIcon
-                      className="fill-muted-foreground stroke-muted-foreground"
-                      size={20}
+                      width={18}
                     />
                   </Link>
                 </div>

@@ -24,9 +24,9 @@ export const metadata: Metadata = {
 export default function BlogPost() {
   return (
     <main className="mb-32">
-      <h1 className="mb-12 pb-6 pt-24 text-center">Blog Post</h1>
+      <h1 className="mb-12 pb-6 pt-6 text-center">Blog Post</h1>
 
-      <div className="container flex flex-col items-center">
+      <div className="container flex flex-col items-center pt-16">
         <article className="flex flex-col gap-6">
           <header>
             <h1>Earth&apos;s rotating inner core is starting to slow down</h1>

@@ -12,7 +12,14 @@ import {
 } from '@repo/core-ui/components/ui/card'
 import { Input } from '@repo/core-ui/components/ui/input'
 import { InfoIcon } from 'lucide-react'
+import type { Metadata } from 'next'
 import Image from 'next/image'
+
+export const metadata: Metadata = {
+  title:
+    "SaaS Line - Blog - Earth's rotating inner core is starting to slow down",
+  description: 'A new study confirms that, showing the latest measurements',
+}
 
 export default function BlogPost() {
   return (

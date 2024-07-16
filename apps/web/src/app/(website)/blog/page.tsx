@@ -1,7 +1,13 @@
 import { Badge } from '@repo/core-ui/components/ui/badge'
 import { TagIcon } from 'lucide-react'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'SaaS Line - Blog',
+  description: 'Blog',
+}
 
 export default function Blog() {
   return (

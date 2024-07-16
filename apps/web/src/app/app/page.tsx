@@ -9,6 +9,12 @@ import VisitorsStat from '@/app/app/_components/visitorsStat'
 import VisitsByCountry from '@/app/app/_components/visitsByCountry'
 import VisitsBySocialMediaStat from '@/app/app/_components/visitsBySocialMediaStat'
 import VisitsBySourceStat from '@/app/app/_components/visitsBySourceStat'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'SaaS Line - Dashboard',
+  description: 'Dashboard',
+}
 
 export default function Home() {
   return (

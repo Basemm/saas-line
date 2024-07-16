@@ -29,8 +29,15 @@ import {
   ShoppingCartIcon,
   StarIcon,
 } from 'lucide-react'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'SaaS Line',
+  description:
+    'SaaS Line is a collection of ready-to-use SaaS components that you can use to build your SaaS in no time.',
+}
 
 export default function Home() {
   return (

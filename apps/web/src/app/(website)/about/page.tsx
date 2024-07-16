@@ -1,8 +1,15 @@
 import LinkedInLogo from '@/app/(website)/_components/logos/linkedInLogo'
 import XLogo from '@/app/(website)/_components/logos/xLogo'
 import { Card, CardContent } from '@repo/core-ui/components/ui/card'
+import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
+
+export const metadata: Metadata = {
+  title: 'SaaS Line - About',
+  description:
+    'At PrecisionTech Machinery, we&apos;re passionate about precision engineering. As a leading manufacturer of CNC milling machines, we blend cutting-edge technology with decades of expertise. Our commitment to quality, innovation, and customer satisfaction sets us apart.',
+}
 
 export default function About() {
   return (

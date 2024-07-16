@@ -14,6 +14,12 @@ import {
   PhoneIcon,
   ShoppingCartIcon,
 } from 'lucide-react'
+import type { Metadata } from 'next'
+
+export const metadata: Metadata = {
+  title: 'SaaS Line - Pricing',
+  description: 'Payment Options',
+}
 
 export default function Pricing() {
   return (

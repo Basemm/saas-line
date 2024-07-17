@@ -45,7 +45,7 @@ export default function Header() {
     <>
       <Button
         className={cn(
-          'fixed bottom-16 right-16 z-50 rounded-lg p-3 py-5 text-white shadow-md',
+          'fixed bottom-16 right-16 z-50 rounded-lg p-3 py-5 shadow-md',
           isVerticalScrolling ? '' : 'hidden'
         )}
         onClick={scrollUp}

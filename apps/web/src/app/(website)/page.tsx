@@ -807,8 +807,8 @@ export default function Home() {
         </div>
       </section>
 
-      <div className="bg-slate-100 dark:bg-slate-900">
-        <section className="container flex flex-col gap-16 py-24">
+      <section className="bg-slate-100 dark:bg-slate-900">
+        <div className="container flex flex-col gap-16 py-24">
           <div className="max-w-[540px] self-center text-center">
             <h2 className="text-2xl md:text-3xl lg:text-4xl">
               Our Innovation Team
@@ -945,8 +945,8 @@ export default function Home() {
               </CardContent>
             </Card>
           </div>
-        </section>
-      </div>
+        </div>
+      </section>
     </main>
   )
 }

@@ -3,7 +3,7 @@
 import NextBundleAnalyzer from '@next/bundle-analyzer'
 
 const nextConfig = {
-  transpilePackages: ['@repo/core-ui'],
+  transpilePackages: ['next-mdx-remote', '@repo/core-ui'],
 }
 
 const withBundleAnalyzer = NextBundleAnalyzer({

@@ -21,10 +21,10 @@ export interface Post {
 }
 
 export const getPostList = cache(async () => {
-  const posts = await fs.readdir('./content/')
+  const postFileList = await fs.readdir('./content/')
 
   return Promise.all(
-    posts
+    postFileList
       .filter((file) => path.extname(file) === '.mdx')
       .map(async (file) => {
         const filePath = `./content/${file}`
@@ -42,10 +42,20 @@ export const getPostList = cache(async () => {
   ).then((postList) => postList.filter((post) => post !== null))
 })
 
-export async function getPost(slug: string) {
-  const posts = await getPostList()
-  return posts.find((post) => post?.slug === slug)
-}
+export const getPostListByCategory = cache(async (category: string) => {
+  const postList = await getPostList()
+  return postList.filter((post) => post.category === category)
+})
+
+export const getCategoryList = cache(async () => {
+  const postList = await getPostList()
+  return [...new Set(postList.map((post) => post.category))]
+})
+
+export const getPost = cache(async (slug: string) => {
+  const postList = await getPostList()
+  return postList.find((post) => post?.slug === slug)
+})
 
 export function getTitleSlug(title: string) {
   return title

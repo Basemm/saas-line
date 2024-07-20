@@ -1,4 +1,4 @@
-import getPostList, { type Post } from '@/app/lib/blog'
+import getPostList, { getCategoryList, type Post } from '@/app/lib/blog'
 import { Badge } from '@repo/core-ui/components/ui/badge'
 import { TagIcon } from 'lucide-react'
 import type { Metadata } from 'next'
@@ -22,7 +22,10 @@ function FeaturedPost({ post }: { post: Post }) {
           width={post.headerImageWidth}
         />
       </Link>
-      <Link className="mt-4 self-start" href="#">
+      <Link
+        className="mt-4 self-start"
+        href={`/blog/category/${post.category}`}
+      >
         <Badge variant="secondary">{post.category}</Badge>
       </Link>
       <Link href={`/blog/${post.slug}`}>
@@ -36,7 +39,7 @@ function FeaturedPost({ post }: { post: Post }) {
 function TopPost({ post }: { post: Post }) {
   return (
     <div className="flex flex-col gap-2 border-b border-dashed border-b-muted pb-4">
-      <Link className="self-start" href="#">
+      <Link className="self-start" href={`/blog/category/${post.category}`}>
         <Badge variant="secondary">{post.category}</Badge>
       </Link>
       <Link className="flex gap-6" href={`/blog/${post.slug}`}>
@@ -59,7 +62,7 @@ function TopPost({ post }: { post: Post }) {
 function LatestPost({ post }: { post: Post }) {
   return (
     <li className="flex flex-col gap-2 border-b border-dashed border-b-muted pb-4">
-      <Link className="self-start" href="#">
+      <Link className="self-start" href={`/blog/category/${post.category}`}>
         <Badge variant="secondary">{post.category}</Badge>
       </Link>
       <Link className="flex gap-6" href={`/blog/${post.slug}`}>
@@ -79,7 +82,7 @@ function LatestPost({ post }: { post: Post }) {
   )
 }
 
-export function PopularPost({ rank, post }: { rank: number; post: Post }) {
+function PopularPost({ rank, post }: { rank: number; post: Post }) {
   return (
     <li className="flex flex-col gap-4 border-b border-dashed border-b-muted">
       <Link className="flex gap-6 pb-4" href={`/blog/${post.slug}`}>
@@ -92,7 +95,19 @@ export function PopularPost({ rank, post }: { rank: number; post: Post }) {
   )
 }
 
+function CategoryItem({ name }: { name: string }) {
+  return (
+    <li className="flex gap-4">
+      <TagIcon className="self-center" size={20} />
+      <Link className="self-start" href={`/blog/category/${name}`}>
+        <h4>{name}</h4>
+      </Link>
+    </li>
+  )
+}
+
 export default async function Blog() {
+  const categoryList = await getCategoryList()
   const postList = await getPostList()
   const topPost = postList[0]
   const topPostList = postList.slice(1, 5)
@@ -150,36 +165,9 @@ export default async function Blog() {
             </div>
 
             <ul className="m-0 ml-4 flex flex-col gap-6 p-0">
-              <li className="flex gap-4">
-                <TagIcon className="self-center" size={20} />
-                <Link className="self-start" href="#">
-                  <h4>Earth</h4>
-                </Link>
-              </li>
-              <li className="flex gap-4">
-                <TagIcon className="self-center" size={20} />
-                <Link className="self-start" href="#">
-                  <h4>Weather</h4>
-                </Link>
-              </li>
-              <li className="flex gap-4">
-                <TagIcon className="self-center" size={20} />
-                <Link className="self-start" href="#">
-                  <h4>Forest</h4>
-                </Link>
-              </li>
-              <li className="flex gap-4">
-                <TagIcon className="self-center" size={20} />
-                <Link className="self-start" href="#">
-                  <h4>Geology</h4>
-                </Link>
-              </li>
-              <li className="flex gap-4">
-                <TagIcon className="self-center" size={20} />
-                <Link className="self-start" href="#">
-                  <h4>Winter</h4>
-                </Link>
-              </li>
+              {categoryList.map((category) => (
+                <CategoryItem key={category} name={category} />
+              ))}
             </ul>
           </div>
         </div>

@@ -1,3 +1,4 @@
+import getPostList, { type Post } from '@/app/lib/blog'
 import { Badge } from '@repo/core-ui/components/ui/badge'
 import { TagIcon } from 'lucide-react'
 import type { Metadata } from 'next'
@@ -9,119 +10,107 @@ export const metadata: Metadata = {
   description: 'Blog',
 }
 
-export default function Blog() {
+function FeaturedPost({ post }: { post: Post }) {
+  return (
+    <div className="flex flex-col lg:justify-self-end">
+      <Link href={`/blog/${post.slug}`}>
+        <Image
+          alt={post.imageAlt}
+          className="rounded-md"
+          height={post.headerImageHeight}
+          src={post.imageSrc}
+          width={post.headerImageWidth}
+        />
+      </Link>
+      <Link className="mt-4 self-start" href="#">
+        <Badge variant="secondary">{post.category}</Badge>
+      </Link>
+      <Link href={`/blog/${post.slug}`}>
+        <h2 className="mt-4">{post.title}</h2>
+        <p className="mt-2 text-muted-foreground">{post.description}</p>
+      </Link>
+    </div>
+  )
+}
+
+function TopPost({ post }: { post: Post }) {
+  return (
+    <div className="flex flex-col gap-2 border-b border-dashed border-b-muted pb-4">
+      <Link className="self-start" href="#">
+        <Badge variant="secondary">{post.category}</Badge>
+      </Link>
+      <Link className="flex gap-6" href={`/blog/${post.slug}`}>
+        <Image
+          alt={post.imageAlt}
+          className="self-start rounded-sm"
+          height={post.thumbImageHeight}
+          src={post.imageSrc}
+          width={post.thumbImageWidth}
+        />
+        <div>
+          <h4>{post.title}</h4>
+          <p className="mt-2 text-muted-foreground">{post.description}</p>
+        </div>
+      </Link>
+    </div>
+  )
+}
+
+function LatestPost({ post }: { post: Post }) {
+  return (
+    <li className="flex flex-col gap-2 border-b border-dashed border-b-muted pb-4">
+      <Link className="self-start" href="#">
+        <Badge variant="secondary">{post.category}</Badge>
+      </Link>
+      <Link className="flex gap-6" href={`/blog/${post.slug}`}>
+        <Image
+          alt={post.imageAlt}
+          className="self-start rounded-sm"
+          height={post.thumbImageHeight}
+          src={post.imageSrc}
+          width={post.thumbImageWidth}
+        />
+        <div>
+          <h4>{post.title}</h4>
+          <p className="mt-2 text-muted-foreground">{post.description}</p>
+        </div>
+      </Link>
+    </li>
+  )
+}
+
+export function PopularPost({ rank, post }: { rank: number; post: Post }) {
+  return (
+    <li className="flex flex-col gap-4 border-b border-dashed border-b-muted">
+      <Link className="flex gap-6 pb-4" href={`/blog/${post.slug}`}>
+        <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-dashed border-muted-foreground bg-muted">
+          {rank}
+        </div>
+        <h4>{post.title}</h4>
+      </Link>
+    </li>
+  )
+}
+
+export default async function Blog() {
+  const postList = await getPostList()
+  const topPost = postList[0]
+  const topPostList = postList.slice(1, 5)
+  const latestPostList = postList.slice(5)
+  const popularPostList = postList.slice(3, 8)
+
   return (
     <main>
       <h1 className="mb-12 pb-6 pt-6 text-center">Blog</h1>
 
       <div className="container pt-16">
         <div className="grid gap-16 rounded-lg bg-muted p-8 shadow-lg lg:grid-cols-2">
-          <div className="flex flex-col lg:justify-self-end">
-            <Link href="#">
-              <Image
-                alt="Nature Sunset"
-                className="rounded-md"
-                height={200}
-                src="/img/nature-sunset.jpg"
-                width={580}
-              />
-            </Link>
-            <Link className="mt-4 self-start" href="#">
-              <Badge variant="secondary">Forest</Badge>
-            </Link>
-            <Link href="#">
-              <h2 className="mt-4">
-                Forest reopens for recreation and visitors
-              </h2>
-              <p className="mt-2 text-muted-foreground">
-                The Mason Hill section has reopened to the public.
-              </p>
-            </Link>
-          </div>
+          {!!topPost && <FeaturedPost post={topPost} />}
+
           <div className="flex flex-col gap-2">
-            <div className="flex flex-col gap-2 border-b border-dashed border-b-muted pb-4">
-              <Link className="self-start" href="#">
-                <Badge variant="secondary">Earth</Badge>
-              </Link>
-              <Link className="flex gap-6" href="#">
-                <Image
-                  alt="Post"
-                  className="self-start rounded-sm"
-                  height={80}
-                  src="/img/earth.jpg"
-                  width={80}
-                />
-                <div>
-                  <h4>
-                    Earth&apos;s rotating inner core is starting to slow down
-                  </h4>
-                  <p className="mt-2 text-muted-foreground">
-                    A new study confirms that, showing the latest measurements
-                  </p>
-                </div>
-              </Link>
-            </div>
-            <div className="flex flex-col gap-2 border-b border-dashed border-b-muted pb-4">
-              <Link className="self-start" href="#">
-                <Badge variant="secondary">Earth</Badge>
-              </Link>
-              <Link className="flex gap-6" href="#">
-                <Image
-                  alt="Post"
-                  className="self-start rounded-sm"
-                  height={80}
-                  src="/img/northen-lights.jpg"
-                  width={80}
-                />
-                <div>
-                  <h4>Northern lights: See them again this summer?</h4>
-                  <p className="mt-2 text-muted-foreground">
-                    Northern lights reached as far south as Florida for the
-                    first time
-                  </p>
-                </div>
-              </Link>
-            </div>
-            <div className="flex flex-col gap-2 border-b border-dashed border-b-muted pb-4">
-              <Link className="self-start" href="#">
-                <Badge variant="secondary">Forest</Badge>
-              </Link>
-              <Link className="flex gap-6" href="#">
-                <Image
-                  alt="Post"
-                  className="self-start rounded-sm"
-                  height={80}
-                  src="/img/large-tree.jpg"
-                  width={80}
-                />
-                <div>
-                  <h4>What makes a good tree? We used AI to ask birds</h4>
-                  <p className="mt-2 text-muted-foreground">
-                    Can we use machine learning to get some tips?
-                  </p>
-                </div>
-              </Link>
-            </div>
-            <div className="flex flex-col gap-2">
-              <Link className="self-start" href="#">
-                <Badge variant="secondary">Winter</Badge>
-              </Link>
-              <Link className="flex gap-6" href="#">
-                <Image
-                  alt="Post"
-                  className="self-start rounded-sm"
-                  height={80}
-                  src="/img/snowy-road.jpg"
-                  width={80}
-                />
-                <div>
-                  <h4>A snow lover&apos;s road trip to Falls Creek</h4>
-                  <p className="mt-2 text-muted-foreground">
-                    Roads are closed to cars during winter.
-                  </p>
-                </div>
-              </Link>
-            </div>
+            {topPostList.map((post) => (
+              <TopPost key={post.slug} post={post} />
+            ))}
           </div>
         </div>
       </div>
@@ -134,102 +123,9 @@ export default function Blog() {
           </div>
 
           <ul className="m-0 flex list-none flex-col gap-6 p-0">
-            <li className="flex flex-col gap-2 border-b border-dashed border-b-muted pb-4">
-              <Link className="self-start" href="#">
-                <Badge variant="secondary">Earth</Badge>
-              </Link>
-              <Link className="flex gap-6" href="#">
-                <Image
-                  alt="Post"
-                  className="self-start rounded-sm"
-                  height={80}
-                  src="/img/earth.jpg"
-                  width={80}
-                />
-                <div>
-                  <h4>
-                    Wine grapes&apos; sweetness reveals Europe&apos;s climate
-                    history
-                  </h4>
-                  <p className="mt-2 text-muted-foreground">
-                    Records on the quality of the grape harvest sheds light on
-                    600 years of weather.
-                  </p>
-                </div>
-              </Link>
-            </li>
-            <li className="flex flex-col gap-2 border-b border-dashed border-b-muted pb-4">
-              <Link className="self-start" href="#">
-                <Badge variant="secondary">Weather</Badge>
-              </Link>
-              <Link className="flex gap-6" href="#">
-                <Image
-                  alt="Post"
-                  className="self-start rounded-sm"
-                  height={80}
-                  src="/img/northern-lights.jpg"
-                  width={80}
-                />
-                <div>
-                  <h4>
-                    Deeper and stronger North Atlantic Gyre during the Last
-                    Glacial Maximum
-                  </h4>
-                  <p className="mt-2 text-muted-foreground">
-                    Analysis of benthic foraminiferal δ18O profiles from
-                    sediment cores
-                  </p>
-                </div>
-              </Link>
-            </li>
-            <li className="flex flex-col gap-2 border-b border-dashed border-b-muted pb-4">
-              <Link className="self-start" href="#">
-                <Badge variant="secondary">Geology</Badge>
-              </Link>
-              <Link className="flex gap-6" href="#">
-                <Image
-                  alt="Post"
-                  className="self-start rounded-sm"
-                  height={80}
-                  src="/img/large-tree.jpg"
-                  width={80}
-                />
-                <div>
-                  <h4>
-                    How mud brought France and England together — 150 years ago
-                  </h4>
-                  <p className="mt-2 text-muted-foreground">
-                    Artificial daylight lacks commercial interest, and a
-                    geologist&apos;s thirst for knowledge kickstarts the bid for
-                    the Channel Tunnel,
-                  </p>
-                </div>
-              </Link>
-            </li>
-            <li className="flex flex-col gap-2">
-              <Link className="self-start" href="#">
-                <Badge variant="secondary">Winter</Badge>
-              </Link>
-              <Link className="flex gap-6" href="#">
-                <Image
-                  alt="Post"
-                  className="self-start rounded-sm"
-                  height={80}
-                  src="/img/snowy-road.jpg"
-                  width={80}
-                />
-                <div>
-                  <h4>
-                    Last year&apos;s summer was the warmest in 2,000 years
-                  </h4>
-                  <p className="mt-2 text-muted-foreground">
-                    A record spanning two millennia of Northern Hemisphere
-                    summer temperatures has revealed the extent to which 2023
-                    was anomalously hot.
-                  </p>
-                </div>
-              </Link>
-            </li>
+            {latestPostList.map((post) => (
+              <LatestPost key={post.slug} post={post} />
+            ))}
           </ul>
         </div>
 
@@ -241,46 +137,9 @@ export default function Blog() {
             </div>
 
             <ol className="m-0 flex list-none flex-col gap-6 p-0">
-              <li className="flex flex-col gap-4 border-b border-dashed border-b-muted">
-                <Link className="flex gap-6 pb-4" href="#">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-dashed border-muted-foreground bg-muted">
-                    1
-                  </div>
-                  <h4>
-                    First fossil chromosomes discovered in freeze-dried mammoth
-                    skin
-                  </h4>
-                </Link>
-              </li>
-              <li className="flex flex-col gap-4 border-b border-dashed border-b-muted">
-                <Link className="flex gap-6 pb-4" href="#">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-dashed border-muted-foreground bg-muted">
-                    2
-                  </div>
-                  <h4>
-                    Scientists edit the genes of gut bacteria in living mice
-                  </h4>
-                </Link>
-              </li>
-              <li className="flex flex-col gap-4 border-b border-dashed border-b-muted">
-                <Link className="flex gap-6 pb-4" href="#">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-dashed border-muted-foreground bg-muted">
-                    3
-                  </div>
-                  <h4>How do you make salty water drinkable?</h4>
-                </Link>
-              </li>
-              <li className="flex flex-col gap-4">
-                <Link className="flex gap-6 pb-4" href="#">
-                  <div className="flex h-10 w-10 shrink-0 items-center justify-center rounded-full border border-dashed border-muted-foreground bg-muted">
-                    4
-                  </div>
-                  <h4>
-                    Fast-moving stars around an intermediate-mass black hole in
-                    ω Centauri
-                  </h4>
-                </Link>
-              </li>
+              {popularPostList.map((post, index) => (
+                <PopularPost key={post.slug} post={post} rank={index + 1} />
+              ))}
             </ol>
           </div>
 

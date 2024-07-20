@@ -7,9 +7,14 @@ export interface Post {
   title: string
   description: string
   slug: string
-  headerImageSrc: string
+  category: string
+  tags: string[]
+  imageSrc: string
+  imageAlt: string
   headerImageHeight: number
   headerImageWidth: number
+  thumbImageHeight: number
+  thumbImageWidth: number
   published: boolean
   date: string
   body: string
@@ -30,14 +35,23 @@ export const getPostList = cache(async () => {
           return null
         }
 
+        data.slug = path.basename(file, '.mdx')
+
         return { ...data, body: content } as Post
       })
-  )
+  ).then((postList) => postList.filter((post) => post !== null))
 })
 
 export async function getPost(slug: string) {
   const posts = await getPostList()
   return posts.find((post) => post?.slug === slug)
+}
+
+export function getTitleSlug(title: string) {
+  return title
+    .toLowerCase()
+    .replace(/[:?,]/g, '')
+    .replace(/[\s']+/g, '-')
 }
 
 export default getPostList

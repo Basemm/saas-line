@@ -19,9 +19,9 @@ export const metadata: Metadata = {
 }
 
 export async function generateStaticParams() {
-  const posts = await getPostList()
+  const postList = await getPostList()
 
-  return posts.map((post) => ({ slug: post?.slug }))
+  return postList.map((post) => ({ slug: post?.slug }))
 }
 
 interface BlogPostProps {
@@ -41,21 +41,24 @@ export default async function BlogPost({ params }: BlogPostProps) {
 
       <div className="container flex flex-col items-center pt-16">
         <article className="flex flex-col gap-6">
-          <header>
+          <header className="flex flex-col gap-4">
             <h1>{post.title}</h1>
-            <p className="mb-6 text-muted-foreground">{post.description}</p>
-            <Image
-              alt="Nature Sunset"
-              className="rounded-md"
-              height={post.headerImageHeight}
-              src={post.headerImageSrc}
-              width={post.headerImageWidth}
-            />
+            <p className="text-muted-foreground">{post.description}</p>
           </header>
 
           <div className="grid gap-16 lg:grid-cols-3">
-            <div className="lg:col-span-2">
-              <PostBody>{post.body}</PostBody>
+            <div className="flex flex-col gap-6 lg:col-span-2">
+              <Image
+                alt="Nature Sunset"
+                className="rounded-md"
+                height={post.headerImageHeight}
+                src={post.imageSrc}
+                width={post.headerImageWidth}
+              />
+
+              <div>
+                <PostBody>{post.body}</PostBody>
+              </div>
             </div>
 
             <aside className="relative w-full">

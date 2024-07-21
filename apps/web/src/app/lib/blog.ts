@@ -31,7 +31,7 @@ export const getPostList = cache(async () => {
         const postContent = await fs.readFile(filePath, 'utf8')
         const { data, content } = matter(postContent)
 
-        if (data.published === false) {
+        if (!data.published) {
           return null
         }
 

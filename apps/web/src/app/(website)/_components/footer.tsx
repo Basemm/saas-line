@@ -170,15 +170,15 @@ export default function Footer() {
 
       <Separator className="my-4 bg-slate-400/50" />
 
-      <div className="container flex justify-between py-6">
-        <div className="flex gap-6">
-          <Link className="text-slate-300" href="#">
+      <div className="container flex flex-wrap justify-between gap-6 py-6">
+        <div className="flex flex-wrap gap-6">
+          <Link className="shrink-0 text-slate-300" href="#">
             Privacy Policy
           </Link>
-          <Link className="text-slate-300" href="#">
+          <Link className="shrink-0 text-slate-300" href="#">
             Refund Policy
           </Link>
-          <Link className="text-slate-300" href="#">
+          <Link className="shrink-0 text-slate-300" href="#">
             Terms of Service
           </Link>
         </div>

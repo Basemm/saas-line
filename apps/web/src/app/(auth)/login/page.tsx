@@ -46,7 +46,7 @@ export default function Home() {
           </Button>
         </div>
         <div className="text-center text-sm">
-          <Link className="underline" href="/forgot-password">
+          <Link className="underline" href="/reset-password">
             Forgot password?
           </Link>
         </div>

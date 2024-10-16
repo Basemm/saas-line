@@ -66,7 +66,7 @@ export default function Header() {
       >
         <div className="container flex w-full items-center justify-between gap-4">
           <Link
-            className="flex items-center gap-2 text-lg font-semibold md:text-base"
+            className="flex items-center gap-2 font-semibold md:text-base"
             href="/"
           >
             <RocketIcon className="h-6 w-6" />
@@ -234,7 +234,9 @@ export default function Header() {
               <Button asChild variant="outline">
                 <Link href="/login">Login</Link>
               </Button>
-              <Button>Sign Up</Button>
+              <Button asChild>
+                <Link href="/sign-up">Sign Up</Link>
+              </Button>
             </div>
           </div>
 
@@ -338,7 +340,9 @@ export default function Header() {
                 <Button asChild size="lg" variant="outline">
                   <Link href="/login">Login</Link>
                 </Button>
-                <Button size="lg">Sign Up</Button>
+                <Button asChild size="lg">
+                  <Link href="/sign-up">Sign Up</Link>
+                </Button>
               </div>
             </SheetContent>
           </Sheet>

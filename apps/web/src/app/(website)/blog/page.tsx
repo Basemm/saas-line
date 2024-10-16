@@ -1,4 +1,4 @@
-import getPostList, { getCategoryList, type Post } from '@/app/lib/blog'
+import getPostList, { getCategoryList, type Post } from '@/lib/blog'
 import { Badge } from '@repo/core-ui/components/ui/badge'
 import { TagIcon } from 'lucide-react'
 import type { Metadata } from 'next'
@@ -113,6 +113,7 @@ export default async function Blog() {
   const topPostList = postList.slice(1, 5)
   const latestPostList = postList.slice(5)
   const popularPostList = postList.slice(3, 8)
+  console.log('postList', postList)
 
   return (
     <main>

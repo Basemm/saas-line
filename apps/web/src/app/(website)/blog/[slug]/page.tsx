@@ -1,5 +1,5 @@
 import PostBody from '@/app/(website)/blog/[slug]/_component/postBody'
-import { getPost, getPostList } from '@/app/lib/blog'
+import { getPost, getPostList } from '@/lib/blog'
 import { Button } from '@repo/core-ui/components/ui/button'
 import {
   Card,

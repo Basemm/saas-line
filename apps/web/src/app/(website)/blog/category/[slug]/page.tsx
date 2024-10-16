@@ -1,4 +1,4 @@
-import { getPostListByCategory, type Post } from '@/app/lib/blog'
+import { getPostListByCategory, type Post } from '@/lib/blog'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'

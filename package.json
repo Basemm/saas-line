@@ -5,8 +5,8 @@
     "build": "turbo build",
     "dev": "turbo dev",
     "lint": "turbo lint",
-    "format": "prettier --write \"**/*.{ts,tsx,md}\"",
-    "format:check": "prettier --check .",
+    "format": "turbo format",
+    "format:check": "turbo format:check",
     "prepare": "husky"
   },
   "devDependencies": {

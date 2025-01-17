@@ -113,7 +113,6 @@ export default async function Blog() {
   const topPostList = postList.slice(1, 5)
   const latestPostList = postList.slice(5)
   const popularPostList = postList.slice(3, 8)
-  console.log('postList', postList)
 
   return (
     <main>

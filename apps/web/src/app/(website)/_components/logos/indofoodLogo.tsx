@@ -19,7 +19,7 @@ const IndofoodLogo = React.forwardRef<SVGSVGElement, SVGProps>((props, ref) => {
         </clipPath>
       </defs>
       <g transform="translate(-171.50495,-564.33729)">
-        <g transform="matrix(1.25,0,0,-1.25,-1177.9733,618.12804)" id="g248">
+        <g id="g248" transform="matrix(1.25,0,0,-1.25,-1177.9733,618.12804)">
           <g id="g250">
             <g transform="translate(1091.3055,27.851)">
               <path

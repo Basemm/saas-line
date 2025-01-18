@@ -21,7 +21,7 @@ export const metadata: Metadata = {
 export async function generateStaticParams() {
   const postList = await getPostList()
 
-  return postList.map((post) => ({ slug: post?.slug }))
+  return postList.map((post) => ({ slug: post.slug }))
 }
 
 interface BlogPostProps {

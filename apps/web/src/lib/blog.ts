@@ -39,7 +39,7 @@ export const getPostList = cache(async () => {
 
         return { ...data, body: content } as Post
       })
-  ).then((postList) => postList.filter((post) => post !== null))
+  ).then((postList) => postList.filter((post): post is Post => post !== null))
 })
 
 export const getPostListByCategory = cache(async (category: string) => {
@@ -54,7 +54,7 @@ export const getCategoryList = cache(async () => {
 
 export const getPost = cache(async (slug: string) => {
   const postList = await getPostList()
-  return postList.find((post) => post?.slug === slug)
+  return postList.find((post) => post.slug === slug)
 })
 
 export function getTitleSlug(title: string) {

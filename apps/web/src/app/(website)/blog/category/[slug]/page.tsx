@@ -1,4 +1,4 @@
-import { getPostListByCategory, type Post } from '@/lib/blog'
+import { getCategoryList, getPostListByCategory, type Post } from '@/lib/blog'
 import type { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
@@ -26,6 +26,12 @@ function PostItem({ post }: { post: Post }) {
       </Link>
     </li>
   )
+}
+
+export async function generateStaticParams() {
+  const categoryList = await getCategoryList()
+
+  return categoryList.map((category) => ({ slug: category }))
 }
 
 interface BlogCategoryProps {

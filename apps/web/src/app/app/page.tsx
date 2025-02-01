@@ -16,7 +16,7 @@ export const metadata: Metadata = {
   description: 'Dashboard',
 }
 
-export default function Home() {
+export default function AppHomePage() {
   return (
     <main className="p-8 pt-0">
       <DateRangeSelector />

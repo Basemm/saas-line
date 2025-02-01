@@ -38,7 +38,7 @@ interface BlogCategoryProps {
   params: { slug: string }
 }
 
-export default async function BlogCategory({ params }: BlogCategoryProps) {
+export default async function BlogCategoryPage({ params }: BlogCategoryProps) {
   const categoryName = params.slug
   const postList = await getPostListByCategory(categoryName)
 

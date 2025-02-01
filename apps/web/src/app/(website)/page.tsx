@@ -39,7 +39,7 @@ export const metadata: Metadata = {
     'SaaS Line is a collection of ready-to-use SaaS components that you can use to build your SaaS in no time.',
 }
 
-export default function Home() {
+export default function WebsiteHomePage() {
   return (
     <main>
       <section className="container flex max-w-[760px] flex-col items-center justify-center pt-16 text-center lg:pt-32">

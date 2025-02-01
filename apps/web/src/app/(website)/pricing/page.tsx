@@ -21,7 +21,7 @@ export const metadata: Metadata = {
   description: 'Payment Options',
 }
 
-export default function Pricing() {
+export default function PricingPage() {
   return (
     <main className="container mb-24 flex flex-col gap-12">
       <section>

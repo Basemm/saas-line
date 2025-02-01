@@ -106,7 +106,7 @@ function CategoryItem({ name }: { name: string }) {
   )
 }
 
-export default async function Blog() {
+export default async function BlogPage() {
   const categoryList = await getCategoryList()
   const postList = await getPostList()
   const topPost = postList[0]

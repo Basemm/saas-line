@@ -28,7 +28,7 @@ interface BlogPostProps {
   params: { slug: string }
 }
 
-export default async function BlogPost({ params }: BlogPostProps) {
+export default async function BlogPostPage({ params }: BlogPostProps) {
   const post = await getPost(params.slug)
 
   if (!post) {

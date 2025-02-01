@@ -10,7 +10,7 @@ export const metadata: Metadata = {
   description: 'Page Not Found',
 }
 
-export default function NotFound() {
+export default function NotFoundPage() {
   return (
     <div className="flex min-h-screen w-full flex-col">
       <Header />

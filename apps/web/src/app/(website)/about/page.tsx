@@ -11,7 +11,7 @@ export const metadata: Metadata = {
     'At PrecisionTech Machinery, we&apos;re passionate about precision engineering. As a leading manufacturer of CNC milling machines, we blend cutting-edge technology with decades of expertise. Our commitment to quality, innovation, and customer satisfaction sets us apart.',
 }
 
-export default function About() {
+export default function AboutPage() {
   return (
     <main className="">
       <section className="container">

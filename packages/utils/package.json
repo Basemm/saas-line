@@ -21,9 +21,10 @@
     "eslint": "^8",
     "eslint-config-next": "14.2.3",
     "prettier": "^3.2.5",
-    "typescript": "^5"
+    "typescript": "^5.7.3"
   },
   "exports": {
+    "./*": "./src/*.ts",
     "./hooks/*": "./src/hooks/*.ts"
   }
 }

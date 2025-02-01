@@ -79,8 +79,8 @@ export default function LoginSignupForm(props: LoginFormProps) {
   return (
     <div className="flex flex-col gap-6">
       <StaticNotification data={staticNotificationData} />
-      <Card className="p-8">
-        <CardContent className="flex h-[30rem] w-96 flex-col gap-16">
+      <Card className="border-0 p-4 sm:border sm:p-8">
+        <CardContent className="flex h-[30rem] w-80 flex-col gap-16 sm:w-96">
           <div className="flex justify-center">
             <Link
               className="flex items-center gap-2 font-semibold md:text-base"

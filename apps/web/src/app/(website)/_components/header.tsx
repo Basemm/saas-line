@@ -232,7 +232,7 @@ export default function Header() {
 
             <div className="flex gap-2">
               <Button asChild variant="outline">
-                <Link href="/login">Login</Link>
+                <Link href="/auth/login">Login</Link>
               </Button>
               <Button asChild>
                 <Link href="/sign-up">Sign Up</Link>
@@ -338,7 +338,7 @@ export default function Header() {
 
               <div className="flex flex-col gap-6 p-6">
                 <Button asChild size="lg" variant="outline">
-                  <Link href="/login">Login</Link>
+                  <Link href="/auth/login">Login</Link>
                 </Button>
                 <Button asChild size="lg">
                   <Link href="/sign-up">Sign Up</Link>

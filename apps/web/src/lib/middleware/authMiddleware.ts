@@ -41,8 +41,17 @@ export default async function authMiddleware(request: NextRequest) {
   const {
     data: { user },
   } = await supabaseServerClient.auth.getUser()
+  const path = request.nextUrl.pathname
 
-  if (!user && !request.nextUrl.pathname.startsWith('/auth')) {
+  // User is authenticated
+  if (user && path.startsWith('/auth')) {
+    const url = request.nextUrl.clone()
+    url.pathname = '/'
+    return NextResponse.redirect(url)
+  }
+
+  // User not authenticated
+  if (!user && !path.startsWith('/auth')) {
     // no user, potentially respond by redirecting the user to the login page
     const url = request.nextUrl.clone()
     url.pathname = '/auth/login'

@@ -235,7 +235,7 @@ export default function Header() {
                 <Link href="/auth/login">Login</Link>
               </Button>
               <Button asChild>
-                <Link href="/sign-up">Sign Up</Link>
+                <Link href="/auth/signup">Sign Up</Link>
               </Button>
             </div>
           </div>
@@ -341,7 +341,7 @@ export default function Header() {
                   <Link href="/auth/login">Login</Link>
                 </Button>
                 <Button asChild size="lg">
-                  <Link href="/sign-up">Sign Up</Link>
+                  <Link href="/auth/signup">Sign Up</Link>
                 </Button>
               </div>
             </SheetContent>

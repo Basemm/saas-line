@@ -24,10 +24,12 @@ const magicLinkFormSchema = z.object({
 type MagicLinkFormData = z.infer<typeof magicLinkFormSchema>
 
 interface LoginFormProps {
+  state: 'login' | 'signup'
   confirmationError?: string
 }
 
-export default function LoginForm({ confirmationError }: LoginFormProps) {
+export default function LoginSignupForm(props: LoginFormProps) {
+  const { confirmationError, state } = props
   const {
     register,
     handleSubmit,
@@ -75,10 +77,10 @@ export default function LoginForm({ confirmationError }: LoginFormProps) {
   }
 
   return (
-    <div className="mt-[-8rem] flex flex-col gap-6">
+    <div className="flex flex-col gap-6">
       <StaticNotification data={staticNotificationData} />
       <Card className="p-8">
-        <CardContent className="flex h-[27rem] w-96 flex-col gap-16">
+        <CardContent className="flex h-[30rem] w-96 flex-col gap-16">
           <div className="flex justify-center">
             <Link
               className="flex items-center gap-2 font-semibold md:text-base"
@@ -90,7 +92,10 @@ export default function LoginForm({ confirmationError }: LoginFormProps) {
           </div>
           <div className="flex flex-col gap-8">
             <div className="space-y-2 text-center">
-              <h1 className="text-2xl font-bold">Login With</h1>
+              <h1 className="text-2xl font-bold">
+                {state === 'login' && 'Login'}
+                {state === 'signup' && 'Join Us Now!'}
+              </h1>
             </div>
             <div className="grid grid-cols-3 gap-2">
               <Button title="Login with Google" variant="outline">
@@ -159,6 +164,22 @@ export default function LoginForm({ confirmationError }: LoginFormProps) {
                 Send Magic Link
               </Button>
             </form>
+            {state === 'login' && (
+              <Link
+                className="text-sm text-muted-foreground"
+                href="/auth/signup"
+              >
+                Don&apos;t have an account? Sign up
+              </Link>
+            )}
+            {state === 'signup' && (
+              <Link
+                className="text-sm text-muted-foreground"
+                href="/auth/login"
+              >
+                Already have an account? Log in
+              </Link>
+            )}
           </div>
         </CardContent>
       </Card>

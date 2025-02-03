@@ -1,28 +1,15 @@
 'use client'
 
 import ContinueWithGoogleButton from '@/app/auth/_components/continueWithGoogleButton'
+import MagicLinkForm from '@/app/auth/_components/magicLinkForm'
 import StaticNotification, {
   type StaticNotificationData,
 } from '@/components/staticNotification'
-import getSupabaseBrowserClient from '@/lib/getSupabaseBrowserClient'
-import { zodResolver } from '@hookform/resolvers/zod'
-import { Button } from '@repo/core-ui/components/ui/button'
 import { Card, CardContent } from '@repo/core-ui/components/ui/card'
-import { Input } from '@repo/core-ui/components/ui/input'
-import { Label } from '@repo/core-ui/components/ui/label'
 import { Separator } from '@repo/core-ui/components/ui/separator'
-import { cn } from '@repo/core-ui/lib/utils'
 import { RocketIcon } from 'lucide-react'
 import Link from 'next/link'
 import { useEffect, useState } from 'react'
-import { useForm } from 'react-hook-form'
-import { z } from 'zod'
-
-const magicLinkFormSchema = z.object({
-  email: z.string().email({ message: 'Invalid email address' }),
-})
-
-type MagicLinkFormData = z.infer<typeof magicLinkFormSchema>
 
 interface LoginFormProps {
   state: 'login' | 'signup'
@@ -31,14 +18,6 @@ interface LoginFormProps {
 
 export default function LoginSignupForm(props: LoginFormProps) {
   const { confirmationError, state } = props
-  const {
-    register,
-    handleSubmit,
-    formState: { errors },
-    reset,
-  } = useForm<MagicLinkFormData>({
-    resolver: zodResolver(magicLinkFormSchema),
-  })
   const [staticNotificationData, setStaticNotificationData] =
     useState<StaticNotificationData>()
 
@@ -53,29 +32,6 @@ export default function LoginSignupForm(props: LoginFormProps) {
       message: 'The link is invalid or has expired. Please try again.',
     })
   }, [confirmationError])
-
-  const onSubmit = async (formData: MagicLinkFormData) => {
-    const { email } = formData
-    const { error } = await getSupabaseBrowserClient().auth.signInWithOtp({
-      email,
-    })
-
-    if (error) {
-      console.error('Error sending magic link:', error)
-      setStaticNotificationData({
-        type: 'error',
-        title: 'Failed',
-        message: "Couldn't send the email, please try another login method.",
-      })
-    } else {
-      setStaticNotificationData({
-        type: 'success',
-        title: 'Success',
-        message: 'Magic link sent! Please check your email.',
-      })
-      reset()
-    }
-  }
 
   return (
     <div className="flex flex-col gap-6">
@@ -99,7 +55,9 @@ export default function LoginSignupForm(props: LoginFormProps) {
               </h1>
             </div>
             <div>
-              <ContinueWithGoogleButton onError={setStaticNotificationData} />
+              <ContinueWithGoogleButton
+                onNotification={setStaticNotificationData}
+              />
             </div>
             <div className="relative">
               <div className="absolute inset-0 flex items-center">
@@ -111,28 +69,9 @@ export default function LoginSignupForm(props: LoginFormProps) {
                 </span>
               </div>
             </div>
-            {/* eslint-disable-next-line @typescript-eslint/no-misused-promises */}
-            <form className="space-y-2" onSubmit={handleSubmit(onSubmit)}>
-              <Label htmlFor="email">Email</Label>
-              <Input
-                autoComplete="email"
-                required
-                type="email"
-                {...register('email')}
-              />
-              <p
-                className={cn(
-                  errors.email ? 'visible' : 'invisible',
-                  'mt-2 text-sm text-red-500'
-                )}
-              >
-                {errors.email?.message}.
-                <br />
-              </p>
-              <Button className="w-full" type="submit">
-                Send Magic Link
-              </Button>
-            </form>
+
+            <MagicLinkForm onNotification={setStaticNotificationData} />
+
             {state === 'login' && (
               <Link
                 className="text-sm text-muted-foreground"

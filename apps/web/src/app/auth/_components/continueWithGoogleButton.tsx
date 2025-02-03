@@ -13,13 +13,13 @@ declare global {
 }
 
 interface ContinueWithGoogleButtonProps {
-  onError: (errorDetails: StaticNotificationData) => void
+  onNotification: (errorDetails: StaticNotificationData) => void
 }
 
 export default function ContinueWithGoogleButton(
   props: ContinueWithGoogleButtonProps
 ) {
-  const { onError } = props
+  const { onNotification } = props
   useEffect(() => {
     window.loginWithGoogleCallback = async (response: {
       credential: string
@@ -32,7 +32,7 @@ export default function ContinueWithGoogleButton(
       )
 
       if (error) {
-        onError({
+        onNotification({
           type: 'error',
           title: 'Failed',
           message: 'Cannot login with Google at the time.',
@@ -43,7 +43,7 @@ export default function ContinueWithGoogleButton(
 
       window.location.reload()
     }
-  }, [onError])
+  }, [onNotification])
 
   return (
     <>
